@@ -92,10 +92,12 @@ main {
 .portfolio__item {
   position: -webkit-sticky;
   position: sticky;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   top: calc((100% + 195px)/2);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-box-shadow: 0px -38px 60px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px -38px 60px rgba(0, 0, 0, 0.45);
 }
 
 .portfolio__item img {
