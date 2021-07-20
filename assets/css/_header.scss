@@ -1,0 +1,166 @@
+header {
+  border-bottom: 2px solid $dark1;
+  height: 195px;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.title {
+  height: 195px;
+  overflow: hidden;
+  div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 195px;
+    position: relative;
+  }
+  &__title {
+    word-wrap: none;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    right: calc(50px + 80px + 100px);
+    transform: translateY(-50%);
+  }
+  &__logo {
+    margin-right: 50px;
+    margin-left: auto;
+    line-height: 0;
+    display: block;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.menu {
+  background-color: $neon;
+  z-index: 10;
+  border-top: 2px solid $dark1;
+  position: absolute;
+  top: 195px;
+  left: 0;
+  height: 195px;
+  &_flex {
+    height: 195px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  &__logo {
+    width: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    border-right: 2px solid $dark1;
+  }
+  &__nav {
+    width: calc(100vw - 195px - 195px - 4px);
+  }
+  &__button {
+    width: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid $dark1;
+
+    &_wrap {
+      cursor: pointer;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 2px solid $dark1;
+      transition: 0.7s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $dark1;
+        transition: 0.5s ease-in-out;
+      }
+      &:hover {
+        border-color: $white;
+        .menu__button_flex {
+          transform: rotate(360deg) scale(0);
+          .a1 {
+            transform: translate(8px, 8px);
+          }
+          .a2 {
+            transform: translate(0, 8px);
+          }
+          .a3 {
+            transform: translate(-8px, 8px);
+          }
+          .a4 {
+            transform: translate(8px, 0);
+          }
+          .a6 {
+            transform: translate(-8px, 0);
+          }
+          .a7 {
+            transform: translate(8px, -8px);
+          }
+          .a8 {
+            transform: translate(0, -8px);
+          }
+          .a9 {
+            transform: translate(-8px, -8px);
+          }
+        }
+        &::before {
+          width: 20px;
+          height: 20px;
+          transition-delay: 0.7s;
+          background-color: $white;
+        }
+      }
+    }
+    &_flex {
+      width: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      transition: 0.7s ease-in-out;
+      div {
+        width: 4px;
+        height: 4px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        border-radius: 50%;
+        background-color: $dark1;
+        transition: 0.7s ease-in-out;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 6) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  font-size: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}

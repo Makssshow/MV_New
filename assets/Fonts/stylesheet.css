@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Almarena';
+    src: url('AlmarenaDisplayRegular.eot');
+    src: url('AlmarenaDisplayRegular.eot?#iefix') format('embedded-opentype'),
+        url('AlmarenaDisplayRegular.woff2') format('woff2'),
+        url('AlmarenaDisplayRegular.woff') format('woff'),
+        url('AlmarenaDisplayRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bigilla';
+    src: url('BigillaBold.eot');
+    src: url('BigillaBold.eot?#iefix') format('embedded-opentype'),
+        url('BigillaBold.woff2') format('woff2'),
+        url('BigillaBold.woff') format('woff'),
+        url('BigillaBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

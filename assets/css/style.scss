@@ -1,0 +1,26 @@
+@import "vars";
+@import "reset";
+
+@import "button";
+body {
+  font-family: $Almarena, "Tahoma", sans-serif;
+  font-size: 180px;
+  font-weight: normal;
+  line-height: 171px;
+  width: 100%;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.neon {
+  background-color: $neon;
+  color: $dark1;
+  .secondary {
+    fill: $dark1;
+  }
+}
+
+@import "header";

@@ -1,0 +1,22 @@
+.cols {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    &__left {
+        position: relative;
+        width: 195px;
+        border-right: 2px solid $dark1;
+        
+    }
+    .center {
+        width: calc(100vw - 195px - 195px - 4px);
+        position: relative;
+    }
+    &__right {
+        position: relative;
+        width: 195px;
+        border-left: 2px solid $dark1;
+        
+    }
+}
