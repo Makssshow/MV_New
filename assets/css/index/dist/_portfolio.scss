@@ -1,23 +1,24 @@
 .portfolio {
-    .cols {
-        &__left {
-            h2 {
-                writing-mode: vertical-lr;
-                margin-top: 48px;
-                transform: rotate(180deg);
-                position: sticky;
-                bottom: 20%;
-            }
-            &_space {
-              height: 100%;
-            }
-        }
-        &__right {
-            h2 {
-                writing-mode: vertical-lr;
-            } 
-        }
+  margin-top: 197px;
+  .cols {
+    &__left {
+      h2 {
+        writing-mode: vertical-lr;
+        margin-top: 48px;
+        transform: rotate(180deg);
+        position: sticky;
+        bottom: 20%;
+      }
+      &_space {
+        height: 100%;
+      }
     }
+    &__right {
+      h2 {
+        writing-mode: vertical-lr;
+      }
+    }
+  }
   .center {
     &__video {
       max-width: 50%;
@@ -41,31 +42,43 @@
       video {
         width: 100%;
         height: auto;
-      } 
+      }
     }
   }
   &_wrap {
-      margin-top: 100vh;
-      position: relative;
-      z-index: 2;
+    margin-top: 140vh;
+    position: relative;
+    z-index: 2;
   }
   &__item {
-    position: sticky;
-    margin-bottom: 80px;
-    top: calc((100% + 195px)/2);
-    transform: translateY(-50%);
-    box-shadow: 0px -38px 60px rgba(0, 0, 0, 0.45);
+    line-height: 0;
+    margin: 0 auto 20%;
+    max-width: 80%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    img {
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: 0px -38px 60px rgba(0, 0, 0, 0.45);
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &_pinned {
+    img {
 
-      img {
-          width: 100%;
-          height: auto;
-      }
+      box-shadow: none;
+    }
   }
 }
 .star {
-    width: 154px;
-    height: auto;
-    max-width: 100%;
-    display: block;
-    margin: 40px auto;
+  width: 154px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 40px auto;
 }

@@ -22,5 +22,25 @@ body {
     fill: $dark1;
   }
 }
+.light-dark {
+  color: $light-dark;
+  background-color: $dark1;
+  .menu {
+    background-color: $dark1;
+  }
+  .menu__button_flex div {
+    background-color: $light-dark;
+  }
+  .menu__button_wrap, .cols__left, .cols__right, .menu__logo, .menu__button, header {
+    border-color: $light-dark;
+  }
+  .secondary {
+    fill: $light-dark;
+  }
+  .center__video {
+    display: none;
+
+  }
+}
 
 @import "header";

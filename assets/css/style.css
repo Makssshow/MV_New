@@ -168,6 +168,31 @@ body {
   fill: #1B1623;
 }
 
+.light-dark {
+  color: #47434D;
+  background-color: #1B1623;
+}
+
+.light-dark .menu {
+  background-color: #1B1623;
+}
+
+.light-dark .menu__button_flex div {
+  background-color: #47434D;
+}
+
+.light-dark .menu__button_wrap, .light-dark .cols__left, .light-dark .cols__right, .light-dark .menu__logo, .light-dark .menu__button, .light-dark header {
+  border-color: #47434D;
+}
+
+.light-dark .secondary {
+  fill: #47434D;
+}
+
+.light-dark .center__video {
+  display: none;
+}
+
 header {
   border-bottom: 2px solid #1B1623;
   height: 195px;
