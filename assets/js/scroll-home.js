@@ -1,9 +1,27 @@
 jQuery(document).ready(function ($) {
+  $(window).resize(function () {
+    values();
+  });
+  values();
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.defaults({
     scrub: 0.2,
   });
-  $()
+
+  function values() {
+    $(".cols__left_space").height(
+      $(".cols").height() - $(".cols__left h2").height()
+    );
+    $(".cols__right_space").height(
+      $(".cols").height() - $(".cols__right_sticky").height()
+    );
+  }
+  
+  $(".all").hover(function() {
+    $(".all h4").html("go");
+  }, function() {
+    $(".all h4").html("All<br/>projects");
+  });
 
   gsap.to(".menu", {
     top: -2,
@@ -14,7 +32,6 @@ jQuery(document).ready(function ($) {
       markers: false,
       scrub: true,
     },
-
     ease: Linear.easeNone,
   });
 
@@ -23,7 +40,14 @@ jQuery(document).ready(function ($) {
     start: "top 80%",
     endTrigger: "html",
     end: "bottom top",
-    toggleClass: { targets: "body", className: "light-dark" },
+    onEnter: () => {
+      $("body").addClass("light-dark");
+      $(".nav__item:nth-child(1)").addClass("nav_active");
+    },
+    onLeaveBack: () => {
+      $("body").removeClass("light-dark");
+      $(".nav__item:nth-child(1)").removeClass("nav_active");
+    },
     markers: false,
   });
 
@@ -43,7 +67,7 @@ jQuery(document).ready(function ($) {
       onLeaveBack: () => {
         $(element).removeClass("portfolio_pinned");
       },
-      markers: true,
+      markers: false,
     });
   });
 });

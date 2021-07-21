@@ -25,21 +25,26 @@ body {
 .light-dark {
   color: $light-dark;
   background-color: $dark1;
-  .menu {
+  .menu, .title div {
     background-color: $dark1;
   }
-  .menu__button_flex div {
+  .menu__button_flex div, .menu__button_wrap::before {
     background-color: $light-dark;
   }
   .menu__button_wrap, .cols__left, .cols__right, .menu__logo, .menu__button, header {
     border-color: $light-dark;
+  }
+  .button {
+    color: $white;
+    &_1, &_2, &_3, &_4 {
+      border-color: $white;
+    }
   }
   .secondary {
     fill: $light-dark;
   }
   .center__video {
     display: none;
-
   }
 }
 

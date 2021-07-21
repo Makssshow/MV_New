@@ -41,11 +41,19 @@
           transform: rotate(180deg);
   position: -webkit-sticky;
   position: sticky;
-  bottom: 20%;
+  bottom: 10%;
 }
 
 .portfolio .cols__left_space {
   height: 100%;
+}
+
+.portfolio .cols__right_sticky {
+  padding: 40px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 10%;
+  overflow: hidden;
 }
 
 .portfolio .cols__right h2 {
@@ -59,10 +67,10 @@
   height: auto;
   position: fixed;
   z-index: 1;
-  top: calc(195px + 20%);
+  top: calc((100vh - 195px) / 2 + 195px);
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .portfolio .center__video::before {
@@ -84,7 +92,7 @@
 }
 
 .portfolio_wrap {
-  margin-top: 140vh;
+  margin-top: 120vh;
   position: relative;
   z-index: 2;
 }
@@ -125,11 +133,137 @@
           box-shadow: none;
 }
 
+.portfolio .scroll {
+  margin-bottom: 13px;
+}
+
+.portfolio .scroll .button_2 {
+  -webkit-animation: scrollBall2 2s infinite alternate ease-in-out;
+          animation: scrollBall2 2s infinite alternate ease-in-out;
+}
+
+.portfolio .scroll .button_3 {
+  -webkit-animation: scrollBall3 2s infinite alternate ease-in-out;
+          animation: scrollBall3 2s infinite alternate ease-in-out;
+}
+
+.portfolio .scroll .button_4 {
+  -webkit-animation: scrollBall4 2s infinite alternate ease-in-out;
+          animation: scrollBall4 2s infinite alternate ease-in-out;
+}
+
+.portfolio .scroll h4 {
+  -webkit-animation: scrollBallTitle 2s infinite alternate ease-in-out;
+          animation: scrollBallTitle 2s infinite alternate ease-in-out;
+}
+
+.portfolio .all {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.portfolio .all:hover .button_1, .portfolio .all:hover .button_2, .portfolio .all:hover .button_3, .portfolio .all:hover .button_4 {
+  border-color: #07B8BE;
+}
+
+.portfolio .all:hover .button_2 {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+}
+
+.portfolio .all:hover .button_3 {
+  -webkit-transform: translate(-50%, -50%) scale(0.75);
+          transform: translate(-50%, -50%) scale(0.75);
+}
+
+.portfolio .all:hover .button_4 {
+  -webkit-transform: translate(-50%, -50%) scale(0.6);
+          transform: translate(-50%, -50%) scale(0.6);
+}
+
+.portfolio .all:hover h4 {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #07B8BE;
+}
+
 .star {
   width: 154px;
   height: auto;
   max-width: 100%;
   display: block;
   margin: 40px auto;
+  -webkit-animation: star 7s infinite alternate;
+          animation: star 7s infinite alternate;
+}
+
+@-webkit-keyframes star {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes star {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes scrollBall2 {
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.9);
+            transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+@keyframes scrollBall2 {
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.9);
+            transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+@-webkit-keyframes scrollBall3 {
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.75);
+            transform: translate(-50%, -50%) scale(0.75);
+  }
+}
+
+@keyframes scrollBall3 {
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.75);
+            transform: translate(-50%, -50%) scale(0.75);
+  }
+}
+
+@-webkit-keyframes scrollBall4 {
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+@keyframes scrollBall4 {
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+@-webkit-keyframes scrollBallTitle {
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes scrollBallTitle {
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
 }
 /*# sourceMappingURL=style.css.map */
