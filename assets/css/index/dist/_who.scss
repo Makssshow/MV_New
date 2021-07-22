@@ -1,0 +1,16 @@
+.who {
+    &__title {
+        white-space: nowrap;
+        overflow: hidden;
+        border-top: 2px solid $beige;
+        border-bottom: 2px solid $beige;
+    }
+    &__left {
+        overflow: hidden;
+        h3 {
+            padding-bottom: 48px;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
+    }
+}

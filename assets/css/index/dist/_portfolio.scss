@@ -4,10 +4,11 @@
     &__left {
       h2 {
         writing-mode: vertical-lr;
-        margin-top: 48px;
+        margin-bottom: 48px;
         transform: rotate(180deg);
         position: sticky;
-        bottom: 10%;
+        bottom: 0%;
+        padding-top: 20vh;
       }
       &_space {
         height: 100%;
@@ -16,8 +17,9 @@
     &__right {
       &_sticky {
         padding: 40px 0;
+        padding-bottom: 20vh;
         position: sticky;
-        bottom: 10%;
+        bottom: 0%;
         overflow: hidden;
       }
       h2 {
@@ -59,7 +61,7 @@
   &__item {
     line-height: 0;
     margin: 0 auto 20%;
-    max-width: 80%;
+    max-width: 90%;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -115,7 +117,7 @@
           transform: translate(-50%, -50%) scale(.75);
         }
         &_4 {
-          transform: translate(-50%, -50%) scale(.6);
+          transform: translate(-50%, -50%) scale(.5);
         }
       }
       h4 {

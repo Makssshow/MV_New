@@ -218,15 +218,22 @@ body {
   background-color: #1B1623;
 }
 
-.light-dark .menu, .light-dark .title div {
+.light-dark .menu,
+.light-dark .title div {
   background-color: #1B1623;
 }
 
-.light-dark .menu__button_flex div, .light-dark .menu__button_wrap::before {
+.light-dark .menu__button_flex div,
+.light-dark .menu__button_wrap::before {
   background-color: #47434D;
 }
 
-.light-dark .menu__button_wrap, .light-dark .cols__left, .light-dark .cols__right, .light-dark .menu__logo, .light-dark .menu__button, .light-dark header {
+.light-dark .menu__button_wrap,
+.light-dark .cols__left,
+.light-dark .cols__right,
+.light-dark .menu__logo,
+.light-dark .menu__button,
+.light-dark header {
   border-color: #47434D;
 }
 
@@ -244,6 +251,40 @@ body {
 
 .light-dark .center__video {
   display: none;
+}
+
+.border-light {
+  color: #B19898;
+}
+
+.border-light .menu__button_flex div,
+.border-light .menu__button_wrap::before {
+  background-color: #B19898;
+}
+
+.border-light .menu__button_wrap,
+.border-light .cols__left,
+.border-light .cols__right,
+.border-light .menu__logo,
+.border-light .menu__button,
+.border-light header,
+.border-light .art__title_wrap {
+  border-color: #B19898;
+}
+
+.border-light .secondary {
+  fill: #B19898;
+}
+
+.border-light .button.more {
+  color: #B19898;
+}
+
+.border-light .button.more .button_1,
+.border-light .button.more .button_2,
+.border-light .button.more .button_3,
+.border-light .button.more .button_4 {
+  border-color: #B19898;
 }
 
 header {
