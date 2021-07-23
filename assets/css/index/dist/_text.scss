@@ -1,0 +1,35 @@
+.text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding-bottom: 54px;
+    &__text {
+        font-size: 28px;
+        line-height: 40px;
+        max-width: 575px;
+        margin-right: 10%;
+        margin-top: 93px;
+        align-self: flex-start;
+        p {
+            text-indent: 40%;
+        }
+    }
+    .projects {
+        color: $beige;
+        font-size: 42px;
+        line-height: 42px;
+        width: 232px;
+        height: 232px;
+        margin: 0 60px 54px 6%;
+        .button_1, .button_2, .button_3 {
+            border-color: $beige;
+        }
+        h4 {
+            padding-bottom: 24px;
+        }
+        svg {
+            margin-bottom: 12px;
+        }
+    }
+}

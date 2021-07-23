@@ -112,9 +112,9 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: ".who__title",
       start: "bottom bottom",
-      end: "top top",
+      end: "bottom bottom",
       endTrigger: ".who",
-      markers: true
+      markers: false
     },
     defaults: {
       ease: Linear.easeNone,
@@ -123,5 +123,17 @@ jQuery(document).ready(function ($) {
 
   who.from(".who__left_wrap", {
     yPercent: -100
+  })
+  .from(".who__right_wrap h3", {
+    yPercent: 50,
+  }, 0);
+
+  gsap.from(".autro h3", {
+    xPercent: -30,
+    scrollTrigger: {
+      trigger: ".autro",
+      start: "top bottom",
+      end: "bottom bottom",
+    }
   });
 });

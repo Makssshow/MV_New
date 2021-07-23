@@ -407,4 +407,71 @@
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+
+.who__right_wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.who__right_wrap h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 54px;
+}
+
+.text__text {
+  font-size: 28px;
+  line-height: 40px;
+  max-width: 575px;
+  margin-right: 10%;
+  margin-top: 93px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.text__text p {
+  text-indent: 40%;
+}
+
+.text .projects {
+  color: #B19898;
+  font-size: 42px;
+  line-height: 42px;
+  width: 232px;
+  height: 232px;
+  margin: 0 60px 54px 6%;
+}
+
+.text .projects .button_1, .text .projects .button_2, .text .projects .button_3 {
+  border-color: #B19898;
+}
+
+.text .projects h4 {
+  padding-bottom: 24px;
+}
+
+.text .projects svg {
+  margin-bottom: 12px;
+}
 /*# sourceMappingURL=style.css.map */

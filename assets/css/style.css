@@ -550,4 +550,105 @@ header {
 .nav__item a:hover {
   color: #ffffff;
 }
+
+.footer__title {
+  overflow: hidden;
+  border-top: 2px solid #B19898;
+  border-bottom: 2px solid #B19898;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.footer__title h2 {
+  white-space: nowrap;
+}
+
+.footer__arrow {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+.footer__left_space {
+  height: calc(50% - 88px);
+}
+
+.mail .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mail .center h3 {
+  font-size: 5vw;
+  line-height: 57px;
+  text-transform: none;
+}
+
+.mail .cols__right {
+  padding: 80px 0;
+}
+
+.mail .cols__right div {
+  margin: auto;
+  margin-bottom: 68px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.mail .cols__right div:last-child {
+  margin-bottom: 0;
+}
+
+.mail .cols__right div a {
+  line-height: 0;
+  font-size: 0;
+  display: block;
+}
+
+.mail .cols__right div a path {
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
+}
+
+.mail .cols__right div a:hover path {
+  fill: #ffffff;
+}
+
+.autro {
+  overflow: hidden;
+  position: relative;
+  border-top: 2px solid #B19898;
+  border-bottom: 2px solid #B19898;
+}
+
+.autro h3 {
+  white-space: nowrap;
+  padding-top: 20px;
+}
+
+.autro__copy {
+  font-size: 10px;
+  line-height: 1em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 8px;
+}
 /*# sourceMappingURL=style.css.map */
