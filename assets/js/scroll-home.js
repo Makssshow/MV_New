@@ -2,18 +2,24 @@ jQuery(document).ready(function ($) {
   $(window).resize(function () {
     values();
   });
-  values();
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.defaults({
     scrub: 0.1,
   });
+  
+  fontSpy("Almarena", {
+    glyphs: "\ue81a\ue82d\ue823",
+    success: function () {
+        values();
+    },
+  });
 
   function values() {
     $(".cols__left_space, .cols__right_space").height(0);
-    var portfHeight = $(".portfolio").height();
-    $(".cols__left_space").height(portfHeight - $(".cols__left h2").height());
+    var portfHeight = $(".portfolio_wrap_3").height();
+    $(".cols__left_space").height(portfHeight - $(".portfolio__left").height() * 1.05);
     $(".cols__right_space").height(
-      portfHeight - $(".cols__right_sticky").height()
+      portfHeight - $(".cols__right_sticky").height() * 1.05
     );
   }
 
@@ -97,6 +103,7 @@ jQuery(document).ready(function ($) {
       $(".nav__item").removeClass("nav_active");
       $(".nav__item:nth-child(1)").addClass("nav_active");
     },
+    markers: false,
   });
 
   gsap.from(".who__title h2", {
@@ -128,12 +135,5 @@ jQuery(document).ready(function ($) {
     yPercent: 50,
   }, 0);
 
-  gsap.from(".autro h3", {
-    xPercent: -30,
-    scrollTrigger: {
-      trigger: ".autro",
-      start: "top bottom",
-      end: "bottom bottom",
-    }
-  });
+
 });

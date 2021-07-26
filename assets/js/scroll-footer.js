@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
     gsap.from(".footer__title h2", {
-        xPercent: -50,
+        xPercent: -30,
         scrollTrigger: {
             trigger: ".footer__title",
             start: "top bottom",
@@ -28,4 +28,15 @@ jQuery(document).ready(function ($) {
     .from(".instagram a", {
         yPercent: 102,
     });
+
+
+    gsap.from(".autro h3", {
+        xPercent: -30,
+        scrollTrigger: {
+          trigger: ".autro",
+          start: "top bottom",
+          end: "bottom bottom",
+        },
+        ease: Linear.easeNone,
+      });
 });

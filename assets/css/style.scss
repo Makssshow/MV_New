@@ -1,6 +1,40 @@
 @import "vars";
 @import "reset";
 
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 1045px;
+	height: 600px;
+  max-width: 100%;
+  max-height: 100%;
+	margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+  transition: .2s;
+}
+
+.tilt__back {
+	position: relative;
+}
+
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
 @import "button";
 body {
   font-family: $Almarena, "Tahoma", sans-serif;
