@@ -514,4 +514,38 @@
 .text .projects svg {
   margin-bottom: 12px;
 }
+
+.text .projects path {
+  -webkit-transition: fill .5s ease-in-out;
+  transition: fill .5s ease-in-out;
+}
+
+.text .projects:hover .button_1, .text .projects:hover .button_2, .text .projects:hover .button_3, .text .projects:hover .button_4 {
+  border-color: #ffffff;
+}
+
+.text .projects:hover .button_2 {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+}
+
+.text .projects:hover .button_3 {
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
+}
+
+.text .projects:hover .button_4 {
+  -webkit-transform: translate(-50%, -50%) scale(0.4);
+          transform: translate(-50%, -50%) scale(0.4);
+}
+
+.text .projects:hover h4 {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  color: #ffffff;
+}
+
+.text .projects:hover path {
+  fill: #ffffff;
+}
 /*# sourceMappingURL=style.css.map */

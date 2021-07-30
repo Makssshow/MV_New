@@ -8,6 +8,8 @@
  * Copyright 2015, Codrops
  * http://www.codrops.com
  */
+setTimeout(() => {
+
 ;(function(window) {
 	
 	'use strict';
@@ -369,3 +371,5 @@
 	window.TiltFx = TiltFx;
 
 })(window);
+
+}, 100);

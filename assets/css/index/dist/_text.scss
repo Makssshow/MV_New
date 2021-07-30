@@ -31,5 +31,35 @@
         svg {
             margin-bottom: 12px;
         }
+        path {
+            transition: fill .5s ease-in-out;
+        }
+        &:hover {
+            .button {
+              &_1,
+              &_2,
+              &_3,
+              &_4 {
+                border-color: $white;
+              }
+              &_2 {
+                transform: translate(-50%, -50%) scale(0.9);
+              }
+      
+              &_3 {
+                transform: translate(-50%, -50%) scale(0.7);
+              }
+              &_4 {
+                transform: translate(-50%, -50%) scale(0.4);
+              }
+            }
+            h4 {
+              transform: scale(.6);
+              color: $white;
+            }
+            path {
+                fill: $white;
+            }
+          }
     }
 }
