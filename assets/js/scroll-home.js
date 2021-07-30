@@ -6,18 +6,21 @@ jQuery(document).ready(function ($) {
   ScrollTrigger.defaults({
     scrub: 0.1,
   });
-  
+
   fontSpy("Almarena", {
     glyphs: "\ue81a\ue82d\ue823",
     success: function () {
-        values();
+      values();
     },
   });
-
+  var a = ($(window).height() - 195) / 2 + 195;
   function values() {
+    a = ($(window).height() - 195) / 2 + 195;
     $(".cols__left_space, .cols__right_space").height(0);
     var portfHeight = $(".portfolio_wrap_3").height();
-    $(".cols__left_space").height(portfHeight - $(".portfolio__left").height() * 1.05);
+    $(".cols__left_space").height(
+      portfHeight - $(".portfolio__left").height() * 1.05
+    );
     $(".cols__right_space").height(
       portfHeight - $(".cols__right_sticky").height() * 1.05
     );
@@ -61,7 +64,6 @@ jQuery(document).ready(function ($) {
     markers: false,
   });
 
-  var a = ($(window).height() - 195) / 2 + 195;
   gsap.utils.toArray(".portfolio__item").forEach((element) => {
     ScrollTrigger.create({
       trigger: element,
@@ -90,6 +92,7 @@ jQuery(document).ready(function ($) {
     },
     ease: Linear.easeNone,
   });
+
   ScrollTrigger.create({
     trigger: ".art",
     start: "top +=" + $("header").height(),
@@ -115,25 +118,54 @@ jQuery(document).ready(function ($) {
     },
     ease: Linear.easeNone,
   });
+  ScrollTrigger.create({
+    trigger: ".who",
+    start: "top +=" + $("header").height(),
+    onEnter: () => {
+      $(".nav__item").removeClass("nav_active");
+      $(".nav__item:nth-child(3)").addClass("nav_active");
+    },
+    onLeaveBack: () => {
+      $(".nav__item").removeClass("nav_active");
+      $(".nav__item:nth-child(2)").addClass("nav_active");
+    },
+  });
   let who = gsap.timeline({
     scrollTrigger: {
       trigger: ".who__title",
       start: "bottom bottom",
       end: "bottom bottom",
       endTrigger: ".who",
-      markers: false
+      markers: false,
     },
     defaults: {
       ease: Linear.easeNone,
-    }
+    },
   });
 
-  who.from(".who__left_wrap", {
-    yPercent: -100
-  })
-  .from(".who__right_wrap h3", {
-    yPercent: 50,
-  }, 0);
+  who
+    .from(".who__left_wrap", {
+      yPercent: -100,
+    })
+    .from(
+      ".who__right_wrap h3",
+      {
+        yPercent: 50,
+      },
+      0
+    );
 
 
+    ScrollTrigger.create({
+      trigger: "footer",
+      start: "top +=" + $("header").height(),
+      onEnter: () => {
+        $(".nav__item").removeClass("nav_active");
+        $(".nav__item:nth-child(4)").addClass("nav_active");
+      },
+      onLeaveBack: () => {
+        $(".nav__item").removeClass("nav_active");
+        $(".nav__item:nth-child(3)").addClass("nav_active");
+      },
+    })
 });
