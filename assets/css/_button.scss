@@ -25,10 +25,10 @@
     border: 2px solid $dark1;
     line-height: 0;
 
-    transition: .5s ease-in-out;
+    transition: border-color .5s ease-in-out; 
   }
   h4 {
-      transition: .5s ease-in-out;
+      transition: color .5s ease-in-out;
   }
   a {
     position: absolute;

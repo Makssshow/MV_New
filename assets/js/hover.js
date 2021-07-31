@@ -1,78 +1,111 @@
 $(document).ready(function () {
-  var hoverMouse = function ($el) {
-    $el.each(function () {
-      var main = $(this);
-      var $self = $(this).children(".button_3");
-      var hover = false;
+  var hoverMouse = function (el) {
+    var main = $(el);
+    var v2 = $(el).children(".button_2");
+    var v3 = $(el).children(".button_3");
+    var v4 = $(el).children(".button_4");
+    var vText = $(el).children(".button__title");
+    var hover = false;
 
-      var attachEventsListener = function () {
-        $(window).on("mousemove", function (e) {
-          // cursor
-          var cursor = {
-            x: e.clientX,
-            y: e.clientY,
-          };
+    var attachEventsListener = function (element) {
+      $(window).on("mousemove", function (e) {
+        var prime = document.querySelector(element);
+        // cursor
+        var cursor = {
+          x: e.clientX,
+          y: e.clientY,
+        };
+        // position
+        var sizes = prime.getBoundingClientRect();
+        // size
+        var width = sizes.width;
+        var height = sizes.height;
+        var elPos = {
+          x: sizes.left + width / 2,
+          y: sizes.top + height / 2,
+        };
 
-          // size
-          var width = main.outerWidth();
-          var height = main.outerHeight();
+        // comparaison
+        var x = cursor.x - elPos.x;
+        var y = cursor.y - elPos.y;
 
-          // position
-          var offset = main.getBoundingClientRect();
-          var elPos = {
-            x: offset.left + width / 2,
-            y: offset.top + height / 2,
-          };
+        // mutex hover
+        var mutHover = false;
 
-          // comparaison
-          var x = cursor.x - elPos.x;
-          var y = cursor.y - elPos.y;
+        // anim
+        if (x <= width * 0.5 && x >= width * -0.5) {
+          if (y <= height * 0.5 && y >= height * -0.5) {
+            mutHover = true;
 
-          // mutex hover
-          var mutHover = false;
-
-          // anim
-          if (x <= width * 0.5 && x >= width * -0.5) {
-            if (y <= height * 0.5 && y >= height * -0.5) {
-              mutHover = true;
-
-              if (!hover) {
-                hover = true;
-              }
-              onHover(x, y);
+            if (!hover) {
+              hover = true;
             }
-            console.log(offset.top);
+            onHover(x, y);
           }
+        }
 
-          // reset
-          if (!mutHover && hover) {
-            onLeave();
-            hover = false;
-          }
-        });
-      };
+        // reset
+        if (!mutHover && hover) {
+          onLeave();
+          hover = false;
+        }
+      });
+    };
 
-      var onHover = function (x, y) {
-        gsap.to($self, 0.4, {
-          x: x * 0.3,
-          y: y * 0.3,
-          //scale: .9,
-          //rotation: x * 0.05,
-          ease: Power2.easeOut,
-        });
-      };
-      var onLeave = function () {
-        gsap.to($self, 0.7, {
-          x: 0,
-          y: 0,
-          // scale: 1,
-          // rotation: 0,
-          ease: Elastic.easeOut.config(1.2, 0.4),
-        });
-      };
-      attachEventsListener();
-    });
+    var onHover = function (x, y) {
+      gsap.to(v2, 0.4, {
+        x: x * 0.1,
+        y: y * 0.1,
+        scale: 0.9,
+        ease: "none",
+      });
+      gsap.to(v3, 0.4, {
+        x: x * 0.2,
+        y: y * 0.2,
+        scale: 0.75,
+        ease: "none",
+      });
+      gsap.to(v4, 0.4, {
+        x: x * 0.3,
+        y: y * 0.3,
+        scale: 0.5,
+        ease: "none",
+      });
+      gsap.to(vText, 0.4, {
+        x: x * 0.3,
+        y: y * 0.3,
+        scale: 1.5,
+        ease: "none",
+      });
+    };
+    var onLeave = function () {
+      gsap.to(v2, 0.7, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        ease: "none",
+      });
+      gsap.to(v3, 0.7, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        ease: "none",
+      });
+      gsap.to(v4, 0.7, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        ease: "none",
+      });
+      gsap.to(vText, 0.7, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        ease: "none",
+      });
+    };
+    attachEventsListener(el);
   };
 
-  hoverMouse($(".all"));
+  hoverMouse(".all");
 });

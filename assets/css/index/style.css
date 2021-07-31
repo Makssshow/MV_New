@@ -183,24 +183,7 @@
   border-color: #07B8BE;
 }
 
-.portfolio .all:hover .button_2 {
-  -webkit-transform: translate(-50%, -50%) scale(0.9);
-          transform: translate(-50%, -50%) scale(0.9);
-}
-
-.portfolio .all:hover .button_3 {
-  -webkit-transform: translate(-50%, -50%) scale(0.75);
-          transform: translate(-50%, -50%) scale(0.75);
-}
-
-.portfolio .all:hover .button_4 {
-  -webkit-transform: translate(-50%, -50%) scale(0.5);
-          transform: translate(-50%, -50%) scale(0.5);
-}
-
 .portfolio .all:hover h4 {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
   color: #07B8BE;
 }
 
