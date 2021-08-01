@@ -31,10 +31,12 @@ $(document).ready(function () {
 
         // mutex hover
         var mutHover = false;
-
         // anim
-        if (x <= width * 0.5 && x >= width * -0.5) {
-          if (y <= height * 0.5 && y >= height * -0.5) {
+        if (x <= (width + 4)/2 && x >= -(width + 4)/2) {
+          if (y <= (height + 4)/2 && y >= -(height + 4)/2) {
+            if (el == ".all") {
+              $(".all h4").html("go");
+            }
             mutHover = true;
 
             if (!hover) {
@@ -48,6 +50,9 @@ $(document).ready(function () {
         if (!mutHover && hover) {
           onLeave();
           hover = false;
+          if (el == ".all") {
+            $(".all h4").html("All<br/>projects");
+          }
         }
       });
     };
@@ -66,14 +71,14 @@ $(document).ready(function () {
         ease: "none",
       });
       gsap.to(v4, 0.4, {
-        x: x * 0.3,
-        y: y * 0.3,
+        x: x * 0.35,
+        y: y * 0.35,
         scale: 0.5,
         ease: "none",
       });
       gsap.to(vText, 0.4, {
-        x: x * 0.3,
-        y: y * 0.3,
+        x: x * 0.35,
+        y: y * 0.35,
         scale: 1.5,
         ease: "none",
       });
