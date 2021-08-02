@@ -58,30 +58,44 @@ $(document).ready(function () {
     };
 
     var onHover = function (x, y) {
-      gsap.to(v2, 0.4, {
+      gsap.to(v2, {
         x: x * 0.1,
         y: y * 0.1,
         scale: 0.9,
-        ease: "none",
+        ease: Linear,
+        duration: .3,
       });
-      gsap.to(v3, 0.4, {
+      gsap.to(v3, {
         x: x * 0.2,
         y: y * 0.2,
         scale: 0.75,
-        ease: "none",
+        ease: Linear,
+        duration: .3,
       });
-      gsap.to(v4, 0.4, {
-        x: x * 0.35,
-        y: y * 0.35,
+      gsap.to(v4, {
+        x: x * 0.4,
+        y: y * 0.4,
         scale: 0.5,
-        ease: "none",
+        ease: Linear,
+        duration: .3,
       });
-      gsap.to(vText, 0.4, {
-        x: x * 0.35,
-        y: y * 0.35,
-        scale: 1.5,
-        ease: "none",
-      });
+      if (el == ".all") {
+        gsap.to(vText, {
+          x: x * 0.4,
+          y: y * 0.4,
+          scale: 1.5,
+          ease: Linear,
+          duration: .3,
+        });
+      } else {
+        gsap.to(vText, {
+          x: x * 0.4,
+          y: y * 0.4,
+          scale: .6,
+          ease: Linear,
+          duration: .3,
+        });
+      }
     };
     var onLeave = function () {
       gsap.to(v2, 0.7, {
@@ -113,4 +127,6 @@ $(document).ready(function () {
   };
 
   hoverMouse(".all");
+  hoverMouse(".more");
+  hoverMouse(".projects");
 });

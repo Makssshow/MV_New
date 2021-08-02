@@ -122,19 +122,8 @@
         &_4 {
           border-color: $neon;
         }
-        // &_2 {
-        //   transform: translate(-50%, -50%) scale(0.9);
-        // }
-
-        // &_3 {
-        //   transform: translate(-50%, -50%) scale(0.75);
-        // }
-        // &_4 {
-        //   transform: translate(-50%, -50%) scale(0.5);
-        // }
       }
       h4 {
-        // transform: scale(1.5);
         color: $neon;
       }
     }
@@ -151,12 +140,6 @@
   max-width: 100%;
   display: block;
   margin: 40px auto;
-  animation: star 7s infinite alternate;
-}
-@keyframes star {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes scrollBall2 {

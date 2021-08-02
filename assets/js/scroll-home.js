@@ -2,6 +2,25 @@ jQuery(document).ready(function ($) {
   $(window).resize(function () {
     values();
   });
+
+  //SWIPER
+  var swiper = new Swiper(".list__container", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    mousewheel: true,
+    freeMode: true,
+  });
+  $(".list__item").hover(
+    function () {
+      $(this).find(".list__title").addClass("hover");
+      $(".list").addClass("hovered");
+    },
+    function () {
+      $(this).find(".list__title").removeClass("hover");
+      $(".list").removeClass("hovered");
+    }
+  );
+
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.defaults({
     scrub: 0.1,
@@ -13,6 +32,7 @@ jQuery(document).ready(function ($) {
       values();
     },
   });
+
   var a = ($(window).height() - 195) / 2 + 195;
   function values() {
     a = ($(window).height() - 195) / 2 + 195;
@@ -35,12 +55,25 @@ jQuery(document).ready(function ($) {
     }
   );
 
+  //Stars animation
+  gsap
+    .timeline({
+      yoyo: true,
+      repeat: -1,
+    })
+    .to(".star, .art__star svg", {
+      duration: 7,
+      rotate: 360,
+      ease: "power2.inOut",
+    });
+
+  //MENU
   gsap.to(".menu", {
     top: -2,
     scrollTrigger: {
       trigger: "html",
       start: "top top",
-      end: "+=" + $("header").height(),
+      end: "+=" + $(".header_wrap").height(),
       markers: false,
       scrub: true,
     },
@@ -155,17 +188,16 @@ jQuery(document).ready(function ($) {
       0
     );
 
-
-    ScrollTrigger.create({
-      trigger: "footer",
-      start: "top +=" + $("header").height(),
-      onEnter: () => {
-        $(".nav__item").removeClass("nav_active");
-        $(".nav__item:nth-child(4)").addClass("nav_active");
-      },
-      onLeaveBack: () => {
-        $(".nav__item").removeClass("nav_active");
-        $(".nav__item:nth-child(3)").addClass("nav_active");
-      },
-    })
+  ScrollTrigger.create({
+    trigger: "footer",
+    start: "top +=" + $("header").height(),
+    onEnter: () => {
+      $(".nav__item").removeClass("nav_active");
+      $(".nav__item:nth-child(4)").addClass("nav_active");
+    },
+    onLeaveBack: () => {
+      $(".nav__item").removeClass("nav_active");
+      $(".nav__item:nth-child(3)").addClass("nav_active");
+    },
+  });
 });

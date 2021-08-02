@@ -198,22 +198,6 @@
   max-width: 100%;
   display: block;
   margin: 40px auto;
-  -webkit-animation: star 7s infinite alternate;
-          animation: star 7s infinite alternate;
-}
-
-@-webkit-keyframes star {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes star {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 @-webkit-keyframes scrollBall2 {
@@ -355,8 +339,6 @@
   display: block;
   width: 154px;
   max-width: 95%;
-  -webkit-animation: starArt 8s infinite alternate ease-in-out;
-          animation: starArt 8s infinite alternate ease-in-out;
 }
 
 .art .more {
@@ -376,39 +358,8 @@
   border-color: #ffffff;
 }
 
-.art .more:hover .button_2 {
-  -webkit-transform: translate(-50%, -50%) scale(0.9);
-          transform: translate(-50%, -50%) scale(0.9);
-}
-
-.art .more:hover .button_3 {
-  -webkit-transform: translate(-50%, -50%) scale(0.75);
-          transform: translate(-50%, -50%) scale(0.75);
-}
-
-.art .more:hover .button_4 {
-  -webkit-transform: translate(-50%, -50%) scale(0.5);
-          transform: translate(-50%, -50%) scale(0.5);
-}
-
 .art .more:hover h4 {
-  -webkit-transform: scale(0.6);
-          transform: scale(0.6);
   color: #ffffff;
-}
-
-@-webkit-keyframes starArt {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes starArt {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 .who__title {

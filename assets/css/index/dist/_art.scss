@@ -57,7 +57,6 @@
           display: block;
         width: 154px;
         max-width: 95%;
-        animation: starArt 8s infinite alternate ease-in-out;
     }
   }
   .more {
@@ -75,27 +74,21 @@
             &_1, &_2, &_3, &_4{
               border-color: $white;
             }
-            &_2 {
-              transform: translate(-50%, -50%) scale(.9);
-            }
+            // &_2 {
+            //   transform: translate(-50%, -50%) scale(.9);
+            // }
       
-            &_3 {
-              transform: translate(-50%, -50%) scale(.75);
-            }
-            &_4 {
-              transform: translate(-50%, -50%) scale(.5);
-            }
+            // &_3 {
+            //   transform: translate(-50%, -50%) scale(.75);
+            // }
+            // &_4 {
+            //   transform: translate(-50%, -50%) scale(.5);
+            // }
           }
           h4 {
-            transform: scale(.6);
+            // transform: scale(.6);
             color: $white;
           }
     }
   }
-}
-
-@keyframes starArt {
-    100% {
-        transform: rotate(360deg);
-    }
 }
