@@ -258,7 +258,7 @@
 
 .art__title {
   white-space: nowrap;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .art__title_wrap {
@@ -367,6 +367,7 @@
   overflow: hidden;
   border-top: 2px solid #B19898;
   border-bottom: 2px solid #B19898;
+  padding: 20px 0;
 }
 
 .who__left {

@@ -3,24 +3,6 @@ jQuery(document).ready(function ($) {
     values();
   });
 
-  //SWIPER
-  var swiper = new Swiper(".list__container", {
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    mousewheel: true,
-    freeMode: true,
-  });
-  $(".list__item").hover(
-    function () {
-      $(this).find(".list__title").addClass("hover");
-      $(".list").addClass("hovered");
-    },
-    function () {
-      $(this).find(".list__title").removeClass("hover");
-      $(".list").removeClass("hovered");
-    }
-  );
-
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.defaults({
     scrub: 0.1,
@@ -121,14 +103,14 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: ".art",
       start: "top bottom",
-      end: "top +=" + $("header").height(),
+      end: "top +=" + $(".header_wrap").height(),
     },
     ease: Linear.easeNone,
   });
 
   ScrollTrigger.create({
     trigger: ".art",
-    start: "top +=" + $("header").height(),
+    start: "top +=" + $(".header_wrap").height(),
     onEnter: () => {
       $("body").addClass("border-light");
       $(".nav__item").removeClass("nav_active");
@@ -147,13 +129,13 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: ".who__title",
       start: "top bottom",
-      end: "bottom +=" + $("header").height(),
+      end: "bottom +=" + $(".header_wrap").height(),
     },
     ease: Linear.easeNone,
   });
   ScrollTrigger.create({
     trigger: ".who",
-    start: "top +=" + $("header").height(),
+    start: "top +=" + $(".header_wrap").height(),
     onEnter: () => {
       $(".nav__item").removeClass("nav_active");
       $(".nav__item:nth-child(3)").addClass("nav_active");
@@ -190,7 +172,7 @@ jQuery(document).ready(function ($) {
 
   ScrollTrigger.create({
     trigger: "footer",
-    start: "top +=" + $("header").height(),
+    start: "top +=" + $(".header_wrap").height(),
     onEnter: () => {
       $(".nav__item").removeClass("nav_active");
       $(".nav__item:nth-child(4)").addClass("nav_active");

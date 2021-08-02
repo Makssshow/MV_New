@@ -19,7 +19,7 @@
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 
-  transition: .2s;
+  transition: .1s;
 }
 
 .tilt__back {
@@ -54,7 +54,8 @@ body {
     fill: $dark1;
   }
 }
-.light-dark {
+
+.light-dark, .open-nav {
   color: $light-dark;
   background-color: $dark1;
   .menu,
@@ -89,7 +90,6 @@ body {
     display: none;
   }
 }
-
 .border-light {
   color: $beige;
   .menu__button_flex div,
@@ -101,7 +101,7 @@ body {
   .cols__right,
   .menu__logo,
   .menu__button,
-  header,
+  .header_wrap,
   .art__title_wrap {
     border-color: $beige;
   }
@@ -116,6 +116,32 @@ body {
     .button_4 {
       border-color: $beige;
     }
+  }
+}
+
+.open-nav {
+  overflow-y: hidden;
+  .nav {
+    .nav__item {
+      a {
+        color: $white;
+        &:hover {
+          color: $neon;
+        }
+      }
+    }
+  }
+  .menu__button_wrap,
+  .cols__left,
+  .cols__right,
+  .menu__logo,
+  .menu__button,
+  .header_wrap,
+  .art__title_wrap {
+    border-color: $white;
+  }
+  .secondary {
+    fill: $white;
   }
 }
 @import "header";
