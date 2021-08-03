@@ -8,6 +8,27 @@
   border-bottom: 2px solid $dark1;
   height: 195px;
   overflow: hidden;
+  .close-button {
+    border-color: $neon;
+    .menu__button_flex div {
+      background-color: $neon;
+    }
+    .a2, .a4, .a6, .a8 {
+      visibility: hidden;
+    }
+    &::before {
+      background-color: $neon;
+    }
+    &:hover {
+      border-color: $neon;
+      &::before {
+        width: 4px;
+        height: 4px;
+        transition-delay: 0s;
+        background-color: $neon;
+      }
+    }
+  }
 }
 .title {
   height: 195px;
@@ -201,6 +222,16 @@
   }
   .swiper-slide {
     width: fit-content;
+    &:first-child {
+      .list__image {
+        justify-content: flex-start;
+      }
+    }
+    &:last-child {
+      .list__image {
+        justify-content: flex-end;
+      }
+    }
   }
 
   &__container {
@@ -219,6 +250,8 @@
   &__title {
     white-space: nowrap;
     font-size: 64px;
+    font-family: $Bigilla;
+    font-weight: 700;
     line-height: 1em;
     height: 80%;
     color: $white;
@@ -244,11 +277,12 @@
   }
   &__image {
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 0%;
     display: flex;
     align-items: start;
     justify-content: center;
+    transform: translateY(-50%);
     width: 100%;
     height: 525px;
     z-index: 14;
