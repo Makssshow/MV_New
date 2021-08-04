@@ -228,6 +228,9 @@
       }
     }
     &:last-child {
+      .list__item {
+        border-right: 2px solid $white;
+      }
       .list__image {
         justify-content: flex-end;
       }
@@ -309,5 +312,60 @@
 
   .swiper-container {
     z-index: 14;
+  }
+}
+
+
+@media screen and (max-width: $tablet) {
+  .header_wrap {
+    height: 100px;
+  }
+  .title {
+    height: 100px;
+    div {
+      height: 100px;
+    }
+    &__title {
+      right: calc(20px + 60px + 20px);
+    }
+    &__logo {
+      margin-right: 20px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  .menu {
+    height: 100px;
+    &_flex {
+      height: 100px;
+    }
+    &__logo {
+      width: 100px;
+      svg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    &__nav {
+      width: calc(100vw - 200px - 4px);
+    }
+    &__button {
+      width: 100px;
+      &_wrap {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  .nav {
+    font-size: 24px;
+    line-height: 1em;
+  }
+  .list {
+    &__container {
+      height: calc(100vh - 102px);
+    }
   }
 }

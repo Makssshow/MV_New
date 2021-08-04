@@ -79,7 +79,7 @@
       position: relative;
       transition: box-shadow 0.3s ease-in-out;
       box-shadow: 0px -38px 60px rgba(0, 0, 0, 0.45);
-    } 
+    }
   }
   &__template {
     width: 100%;
@@ -144,28 +144,58 @@
 
 @keyframes scrollBall2 {
   100% {
-    // width: calc(100% - 12px);
-    // height: calc(100% - 12px);
     transform: translate(-50%, -50%) scale(0.9);
   }
 }
 
 @keyframes scrollBall3 {
   100% {
-    // width: calc(100% - 32px);
-    // height: calc(100% - 32px);
     transform: translate(-50%, -50%) scale(0.75);
   }
 }
 @keyframes scrollBall4 {
   100% {
-    // width: calc(100% - 62px);
-    // height: calc(100% - 62px);
     transform: translate(-50%, -50%) scale(0.5);
   }
 }
 @keyframes scrollBallTitle {
   100% {
     transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  @keyframes scrollBallTitle {
+    100% {
+      transform: scale(0.7);
+    }
+  }
+
+  .portfolio {
+    .cols {
+      &__right {
+        &_sticky {
+          &_wrap {
+            padding: 20px 0;
+          }
+        }
+        h2 {
+          line-height: 100px;
+        }
+      }
+      &__left {
+        h2 {
+          line-height: 100px;
+        }
+      }
+    }
+    .all {
+      font-size: 14px;
+      line-height: 1em;
+    }
+  }
+  .star {
+    width: 80px;
+    height: 80px;
   }
 }

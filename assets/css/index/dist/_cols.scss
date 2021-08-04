@@ -20,3 +20,17 @@
         
     }
 }
+
+@media screen and (max-width: $tablet) {
+    .cols {
+        &__left {
+            width: 100px;
+        }
+        &__right {
+            width: 100px;
+        }
+        .center {
+            width: calc(100vw - 200px - 4px);
+        }
+    }
+}

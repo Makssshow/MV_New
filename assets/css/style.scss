@@ -46,6 +46,12 @@ body {
   margin: 0;
   padding: 0;
 }
+@media screen and (max-width: $tablet) {
+  body {
+    font-size: 80px;
+    line-height: 66px;
+  }
+}
 
 .neon {
   background-color: $neon;
