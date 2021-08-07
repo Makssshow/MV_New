@@ -10,6 +10,7 @@
         }
     }
     &__arrow {
+        line-height: 0;
         margin: auto;
         width: fit-content;
         position: sticky;
@@ -74,5 +75,39 @@
         width: 100%;
         text-align: center;
         bottom: 8px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .footer {
+        &__arrow {
+            svg {
+                width: 50px;
+                height: auto;
+            }
+        }
+        &__left_space {
+            height: calc(50% - 25px);
+        }
+    }
+    .mail {
+        .cols__right {
+            padding: 60px 0;
+            div {
+                margin-bottom: 36px;
+                a {
+                    svg {
+                        width: 50px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .autro {
+        &__copy {
+            font-size: 8px;
+            bottom: 4px;
+        }
     }
 }

@@ -34,7 +34,8 @@
   .center {
     &__video {
       max-width: 50%;
-      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
       position: fixed;
       z-index: 1;
       top: calc((100vh - 195px) / 2 + 195px);
@@ -172,11 +173,13 @@
   }
 
   .portfolio {
+    margin-top: 102px;
     .cols {
       &__right {
         &_sticky {
           &_wrap {
             padding: 20px 0;
+            padding-bottom: 20vh;
           }
         }
         h2 {
@@ -192,6 +195,16 @@
     .all {
       font-size: 14px;
       line-height: 1em;
+    }
+    &_wrap {
+      &_2 {
+        // padding-top: 100vh;
+      }
+    }
+    .center {
+      &__video {
+        top: calc((100vh - 100px) / 2 + 100px);
+      }
     }
   }
   .star {

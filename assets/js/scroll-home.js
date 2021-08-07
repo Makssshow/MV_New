@@ -15,9 +15,11 @@ jQuery(document).ready(function ($) {
     },
   });
 
-  var a = ($(window).height() - 195) / 2 + 195;
+  var a = ($(window).height() - $(".header_wrap").height()) / 2 + $(".header_wrap").height();
+  var header = $(".header_wrap").height();
   function values() {
-    a = ($(window).height() - 195) / 2 + 195;
+    header = $(".header_wrap").height();
+    a = ($(window).height() - header) / 2 + header;
     $(".cols__left_space, .cols__right_space").height(0);
     var portfHeight = $(".portfolio_wrap_3").height();
     $(".cols__left_space").height(
@@ -55,7 +57,7 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: "html",
       start: "top top",
-      end: "+=" + $(".header_wrap").height(),
+      end: "+=" + header,
       markers: false,
       scrub: true,
     },
@@ -103,14 +105,14 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: ".art",
       start: "top bottom",
-      end: "top +=" + $(".header_wrap").height(),
+      end: "top +=" + header,
     },
     ease: Linear.easeNone,
   });
 
   ScrollTrigger.create({
     trigger: ".art",
-    start: "top +=" + $(".header_wrap").height(),
+    start: "top +=" + header,
     onEnter: () => {
       $("body").addClass("border-light");
       $(".nav__item").removeClass("nav_active");
@@ -129,13 +131,13 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: ".who__title",
       start: "top bottom",
-      end: "bottom +=" + $(".header_wrap").height(),
+      end: "bottom +=" + header,
     },
     ease: Linear.easeNone,
   });
   ScrollTrigger.create({
     trigger: ".who",
-    start: "top +=" + $(".header_wrap").height(),
+    start: "top +=" + header,
     onEnter: () => {
       $(".nav__item").removeClass("nav_active");
       $(".nav__item:nth-child(3)").addClass("nav_active");
@@ -172,7 +174,7 @@ jQuery(document).ready(function ($) {
 
   ScrollTrigger.create({
     trigger: "footer",
-    start: "top +=" + $(".header_wrap").height(),
+    start: "top +=" + header,
     onEnter: () => {
       $(".nav__item").removeClass("nav_active");
       $(".nav__item:nth-child(4)").addClass("nav_active");

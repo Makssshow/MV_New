@@ -338,6 +338,7 @@
   }
   .menu {
     height: 100px;
+    top: 100px;
     &_flex {
       height: 100px;
     }
@@ -366,6 +367,13 @@
   .list {
     &__container {
       height: calc(100vh - 102px);
+    }
+    &__item {
+      width: 140px;
+    }
+    &__image {
+      width: 100%;
+      max-height: calc(100vh - 140px);
     }
   }
 }
