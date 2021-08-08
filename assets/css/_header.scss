@@ -13,7 +13,10 @@
     .menu__button_flex div {
       background-color: $neon;
     }
-    .a2, .a4, .a6, .a8 {
+    .a2,
+    .a4,
+    .a6,
+    .a8 {
       visibility: hidden;
     }
     &::before {
@@ -37,7 +40,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 195px;
+    height: 100%;
     position: relative;
     z-index: 10;
     background-color: $neon;
@@ -94,7 +97,9 @@
     justify-content: center;
     align-items: center;
     border-left: 2px solid $dark1;
-
+    &_mobile {
+      display: none;
+    }
     &_wrap {
       cursor: pointer;
       width: 76px;
@@ -245,7 +250,7 @@
     height: 100%;
     position: relative;
     border-left: 2px solid $white;
-    transition: border-color .7s ease-in-out;
+    transition: border-color 0.7s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,7 +268,7 @@
     writing-mode: vertical-lr;
     z-index: 15;
     transform: rotate(180deg);
-    transition: color .7s ease-in-out;
+    transition: color 0.7s ease-in-out;
     a {
       display: block;
     }
@@ -315,16 +320,12 @@
   }
 }
 
-
 @media screen and (max-width: $tablet) {
   .header_wrap {
     height: 100px;
   }
   .title {
     height: 100px;
-    div {
-      height: 100px;
-    }
     &__title {
       right: calc(20px + 60px + 20px);
     }
@@ -374,6 +375,74 @@
     &__image {
       width: 100%;
       max-height: calc(100vh - 140px);
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .nav {
+    display: none;
+  }
+  .header_wrap {
+    height: 60px;
+  }
+  .title {
+    height: 60px;
+    &__logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .menu {
+    top: 62px;
+    height: 60px;
+    &_flex {
+      height: 60px;
+    }
+    &__nav {
+      width: calc(100vh - 70px - 70px);
+      align-self: flex-end;
+    }
+    &__logo {
+      width: fit-content;
+      border-right: none;
+      padding-left: 5px;
+      padding-right: 15px;
+      svg {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    &__button {
+      border-left: none;
+      width: fit-content;
+      padding-right: 5px;
+      padding-left: 15px;
+      &_wrap {
+        width: 50px;
+        height: 50px;
+        &::before {
+          width: 3px;
+          height: 3px;
+        }
+      }
+      &_mobile {
+        display: block;
+        line-height: 57px;
+        cursor: pointer;
+      }
+      &_flex {
+        width: 15px;
+        height: 15px;
+        div {
+          width: 3px;
+          height: 3px;
+          margin-right: 3px;
+          margin-bottom: 3px;
+        }
+      }
     }
   }
 }

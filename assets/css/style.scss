@@ -53,6 +53,13 @@ body {
   }
 }
 
+@media screen and (max-width: $mobile) {
+  body {
+    font-size: 48px;
+    line-height: 57px;
+  }
+}
+
 .neon {
   background-color: $neon;
   color: $dark1;

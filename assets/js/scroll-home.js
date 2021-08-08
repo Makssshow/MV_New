@@ -15,7 +15,9 @@ jQuery(document).ready(function ($) {
     },
   });
 
-  var a = ($(window).height() - $(".header_wrap").height()) / 2 + $(".header_wrap").height();
+  var a =
+    ($(window).height() - $(".header_wrap").height()) / 2 +
+    $(".header_wrap").height();
   var header = $(".header_wrap").height();
   function values() {
     header = $(".header_wrap").height();
@@ -57,7 +59,7 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: "html",
       start: "top top",
-      end: "+=" + header,
+      end: () => "+=" + header,
       markers: false,
       scrub: true,
     },
@@ -84,8 +86,8 @@ jQuery(document).ready(function ($) {
   gsap.utils.toArray(".portfolio__item").forEach((element) => {
     ScrollTrigger.create({
       trigger: element,
-      start: "center +=" + a,
-      end:
+      start: () => "center +=" + a,
+      end: () =>
         "bottom-=" + $(".portfolio__item:last-child").height() / 2 + " +=" + a,
       endTrigger: ".portfolio_wrap",
       pin: true,
@@ -105,14 +107,14 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: ".art",
       start: "top bottom",
-      end: "top +=" + header,
+      end: () => "top +=" + header,
     },
     ease: Linear.easeNone,
   });
 
   ScrollTrigger.create({
     trigger: ".art",
-    start: "top +=" + header,
+    start: () => "top +=" + header,
     onEnter: () => {
       $("body").addClass("border-light");
       $(".nav__item").removeClass("nav_active");
@@ -131,13 +133,13 @@ jQuery(document).ready(function ($) {
     scrollTrigger: {
       trigger: ".who__title",
       start: "top bottom",
-      end: "bottom +=" + header,
+      end: () => "bottom +=" + header,
     },
     ease: Linear.easeNone,
   });
   ScrollTrigger.create({
     trigger: ".who",
-    start: "top +=" + header,
+    start: () => "top +=" + header,
     onEnter: () => {
       $(".nav__item").removeClass("nav_active");
       $(".nav__item:nth-child(3)").addClass("nav_active");
@@ -174,7 +176,7 @@ jQuery(document).ready(function ($) {
 
   ScrollTrigger.create({
     trigger: "footer",
-    start: "top +=" + header,
+    start: () => "top +=" + header,
     onEnter: () => {
       $(".nav__item").removeClass("nav_active");
       $(".nav__item:nth-child(4)").addClass("nav_active");

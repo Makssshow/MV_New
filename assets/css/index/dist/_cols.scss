@@ -34,3 +34,17 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .cols {
+        &__left {
+            display: none;
+        }
+        .center {
+            width: auto;
+        }
+        &__right {
+            display: none;
+        }
+    }
+}

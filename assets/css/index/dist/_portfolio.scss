@@ -1,5 +1,8 @@
 .portfolio {
   margin-top: 197px;
+  &_mobile {
+    display: none;
+  }
   .tilt {
     position: absolute;
     top: 0;
@@ -196,19 +199,78 @@
       font-size: 14px;
       line-height: 1em;
     }
-    &_wrap {
-      &_2 {
-        // padding-top: 100vh;
-      }
-    }
     .center {
       &__video {
         top: calc((100vh - 100px) / 2 + 100px);
+      }
+      &__item {
+        height: calc(100vh - 102px);
       }
     }
   }
   .star {
     width: 80px;
     height: 80px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .portfolio {
+    margin-top: 62px;
+    .center {
+      &__video {
+        max-width: 100%;
+        width: 100%;
+        top: calc((100vh - 60px) / 2 + 60px);
+      }
+      &__item {
+        width: 100%;
+        height: calc(100vh - 62px);
+      }
+      &_wrap {
+        &_2 {
+          padding-top: 0;
+        }
+      }
+    }
+    &_mobile {
+      margin-top: calc(100vh - 62px);
+      width: 100%;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 13;
+
+      &_wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; 
+      }
+      .all {
+        width: 50px;
+        height: 50px;
+        font-size: 8px;
+        line-height: 8px;
+        display: block; 
+        &:hover {
+          .button {
+            &_1,
+            &_2,
+            &_3,
+            &_4 {
+              border-color: $white;
+            }
+          }
+          h4 {
+            color: $white;
+          }
+        }
+      }
+
+      .star {
+        margin: 0;
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 }
