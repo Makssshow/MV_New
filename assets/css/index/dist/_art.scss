@@ -74,21 +74,19 @@
             &_1, &_2, &_3, &_4{
               border-color: $white;
             }
-            // &_2 {
-            //   transform: translate(-50%, -50%) scale(.9);
-            // }
-      
-            // &_3 {
-            //   transform: translate(-50%, -50%) scale(.75);
-            // }
-            // &_4 {
-            //   transform: translate(-50%, -50%) scale(.5);
-            // }
           }
           h4 {
-            // transform: scale(.6);
             color: $white;
           }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .art {
+    &__title {
+      padding: 0;
+      padding-top: 3px;
     }
   }
 }

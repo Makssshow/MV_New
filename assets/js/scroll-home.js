@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
       yoyo: true,
       repeat: -1,
     })
-    .to(".star, .art__star svg", {
+    .to(".star svg, .art__star svg", {
       duration: 7,
       rotate: 360,
       ease: "power2.inOut",
