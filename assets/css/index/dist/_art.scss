@@ -82,11 +82,20 @@
   }
 }
 
+
+
 @media screen and (max-width: $mobile) {
   .art {
     &__title {
       padding: 0;
       padding-top: 3px;
+    }
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+    .center {
+      width: 100%;
     }
   }
 }
