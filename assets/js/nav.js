@@ -47,6 +47,16 @@ $(document).ready(function () {
     $(".list").css("display", "none");
     $(".menu__button_wrap").removeClass("close-button");
   }
+
+
+//mobile menu click
+  $(".menu__button_mobile").click(function() {
+    openMobile();
+  });
+
+  function openMobile() {
+    
+  }
 });
 
 

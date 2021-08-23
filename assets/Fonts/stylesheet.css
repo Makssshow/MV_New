@@ -12,13 +12,12 @@
 
 @font-face {
     font-family: 'Bigilla';
-    src: url('BigillaBold.eot');
-    src: url('BigillaBold.eot?#iefix') format('embedded-opentype'),
-        url('BigillaBold.woff2') format('woff2'),
-        url('BigillaBold.woff') format('woff'),
-        url('BigillaBold.ttf') format('truetype');
-    font-weight: bold;
+    src: url('BigillaRegular.eot');
+    src: url('BigillaRegular.eot?#iefix') format('embedded-opentype'),
+        url('BigillaRegular.woff2') format('woff2'),
+        url('BigillaRegular.woff') format('woff'),
+        url('BigillaRegular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-
