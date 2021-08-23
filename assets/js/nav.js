@@ -9,13 +9,24 @@ $(document).ready(function () {
         duration: 0.7,
       });
       $(".list").css("display", "block");
-      //SWIPER
-      var swiper = new Swiper(".list__container", {
-        slidesPerView: "auto",
-        spaceBetween: 0,
-        mousewheel: true,
-        freeMode: true,
-      });
+      if ($(window).width() <= 650) {
+        //SWIPER
+        var swiper = new Swiper(".list__container", {
+          slidesPerView: "auto",
+          spaceBetween: 0,
+          direction: "vertical",
+          mousewheel: true,
+          freeMode: true,
+        });
+      } else {
+        //SWIPER
+        var swiper = new Swiper(".list__container", {
+          slidesPerView: "auto",
+          spaceBetween: 0,
+          mousewheel: true,
+          freeMode: true,
+        });
+      }
       $(this).addClass("close-button");
     }
   });
@@ -37,3 +48,5 @@ $(document).ready(function () {
     $(".menu__button_wrap").removeClass("close-button");
   }
 });
+
+

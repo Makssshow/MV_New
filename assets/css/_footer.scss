@@ -49,7 +49,7 @@
       svg {
         transform: rotate(360deg);
         &:last-child {
-            clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
         }
       }
     }
@@ -148,6 +148,66 @@
     &__copy {
       font-size: 8px;
       bottom: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .footer {
+    &__title {
+      padding: 0;
+      padding-top: 5px;
+    }
+    .center {
+      h3 {
+        font-size: 24px;
+        line-height: 23px;
+        margin: 60px 0;
+      }
+    }
+    .cols {
+      flex-direction: column;
+      align-items: center;
+      &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-left: none;
+        border-style: solid;
+        border-width: 2px 0 0 0;
+        div {
+          margin: 0;
+          margin-left: 40px;
+          height: 50px;
+          width: 50px;
+          &.behance {
+            margin-left: 0;
+            width: 80px;
+          }
+          a {
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .autro {
+    border: none;
+    &__copy {
+      position: static;
+      font-size: 10px;
+      padding: 10px 0;
+      line-height: 1em;
+    }
+    h3 {
+      padding: 0;
+      padding-top: 3px;
+      border-top: $beige solid 2px;
+      border-bottom: $beige solid 2px;
     }
   }
 }

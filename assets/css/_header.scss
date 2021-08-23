@@ -445,4 +445,39 @@
       }
     }
   }
+  .list {
+    &__container {
+      height: calc(100vh - 62px);
+    }
+    .swiper-slide {
+      height: fit-content;
+      width: 100%;
+      &:first-child {
+        .list__image {
+          top: 0;
+          justify-content: center;
+          transform: none;
+        }
+      }
+    }
+    &__item {
+      border-left: none;
+      border-bottom: $white solid 2px;
+      width: 100%;
+      height: 130px;
+    }
+    &__title {
+      writing-mode: unset;
+      font-size: 48px;
+      line-height: 1em;
+      transform: none;
+      white-space: normal;
+      height: fit-content;
+      width: 85%;
+      text-align: left;
+    }
+    &__image {
+      max-height: 50vh;
+    }
+  }
 }
