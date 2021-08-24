@@ -3,6 +3,9 @@ $(document).ready(function () {
     if ($(this).hasClass("close-button")) {
       closeNav();
     } else {
+      if ($("body").hasClass("open-menu")) {
+        closeMobile();
+      }
       $("body").addClass("open-nav");
       gsap.to(".menu", {
         top: -2,
@@ -48,15 +51,33 @@ $(document).ready(function () {
     $(".menu__button_wrap").removeClass("close-button");
   }
 
-
-//mobile menu click
-  $(".menu__button_mobile").click(function() {
-    openMobile();
+  //mobile menu click
+  $(".menu__button_mobile").click(function () {
+    if ($("body").hasClass("open-menu")) {
+      closeMobile();
+    } else {
+      openMobile();
+    }
+  });
+  $(".nav__item a").click(function () {
+    closeMobile()
   });
 
   function openMobile() {
-    
+    if ($("body").hasClass("open-nav")) {
+      closeNav();
+    }
+    gsap.to(".menu", {
+      top: -2,
+      duration: 0.7,
+    });
+    $("body").addClass("open-menu");
+    $(".menu__button_mobile").html("close");
+  }
+
+  function closeMobile() {
+    $("body").removeClass("open-menu");
+    $(".menu__button_mobile").html("menu");
+    ScrollTrigger.refresh();
   }
 });
-
-

@@ -68,7 +68,7 @@ body {
   }
 }
 
-.light-dark, .open-nav {
+.light-dark, .open-nav, .open-menu {
   color: $light-dark;
   background-color: $dark1;
   .menu,
@@ -132,7 +132,7 @@ body {
   }
 }
 
-.open-nav {
+.open-nav, .open-menu {
   overflow: hidden;
   .nav {
     .nav__item {
@@ -160,5 +160,18 @@ body {
     fill: $white;
   }
 }
+
+.open-menu {
+  .nav {
+    display: flex;
+  }
+  .menu__button_flex div {
+    background-color: $white;
+  }
+  .menu__button_wrap::before {
+    background-color: $white;
+  }
+}
+
 @import "header";
 @import "footer";

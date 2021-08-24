@@ -197,6 +197,10 @@
   }
   .autro {
     border: none;
+    &__div {
+      border-top: $beige solid 2px;
+      border-bottom: $beige solid 2px;
+    }
     &__copy {
       position: static;
       font-size: 10px;
@@ -206,8 +210,6 @@
     h3 {
       padding: 0;
       padding-top: 3px;
-      border-top: $beige solid 2px;
-      border-bottom: $beige solid 2px;
     }
   }
 }

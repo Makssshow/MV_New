@@ -65,6 +65,18 @@ jQuery(document).ready(function ($) {
     },
     ease: Linear.easeNone,
   });
+  if ($(window).width() <= 650) {
+    gsap.to(".portfolio_mobile_wrap", {
+      xPercent: -30,
+      scrollTrigger: {
+        trigger: ".portfolio_mobile__anim",
+        start: "top bottom",
+        end: "top top",
+        markers: false,
+      },
+      ease: Linear.easeNone,
+    });
+  }
 
   ScrollTrigger.create({
     trigger: ".portfolio_wrap",

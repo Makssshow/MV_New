@@ -1,12 +1,28 @@
 jQuery(document).ready(function ($) {
-    gsap.from(".footer__title h2", {
-        xPercent: -30,
-        scrollTrigger: {
-            trigger: ".footer__title",
-            start: "top bottom",
-            end: "top +=" + $("header").height(),
-        }
-    });
+    if ($(window).width() > 650) {
+
+        gsap.from(".footer__title h2", {
+            xPercent: -30,
+            scrollTrigger: {
+                trigger: ".footer__title",
+                start: "top bottom",
+                end: "top +=" + $("header").height(),
+                ease: Linear.easeNone,
+            }
+        });
+    } else {
+        gsap.from(".footer__title h2", {
+            xPercent: -30,
+            scrollTrigger: {
+                trigger: ".footer__title",
+                start: "top bottom",
+                end: "bottom bottom",
+                endTrigger: "html",
+                markers: false,
+                ease: Linear.easeNone,
+            }
+        });
+    }
     let footer = gsap.timeline({
         scrollTrigger: {
             trigger: ".mail .cols__right",
