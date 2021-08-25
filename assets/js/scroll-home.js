@@ -2,6 +2,10 @@ jQuery(document).ready(function ($) {
   $(window).resize(function () {
     values();
   });
+  console.log(
+    "%cMade by Maks Ray. E-mail: maksray@gmail.com",
+    "color:#000; background: #07B8BE; font-size: 28px; padding: 5px 10px;"
+  );
 
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.defaults({
@@ -140,62 +144,67 @@ jQuery(document).ready(function ($) {
     markers: false,
   });
 
-  gsap.from(".who__title h2", {
-    xPercent: -60,
-    scrollTrigger: {
-      trigger: ".who__title",
-      start: "top bottom",
-      end: () => "bottom +=" + header,
-    },
-    ease: Linear.easeNone,
-  });
-  ScrollTrigger.create({
-    trigger: ".who",
-    start: () => "top +=" + header,
-    onEnter: () => {
-      $(".nav__item").removeClass("nav_active");
-      $(".nav__item:nth-child(3)").addClass("nav_active");
-    },
-    onLeaveBack: () => {
-      $(".nav__item").removeClass("nav_active");
-      $(".nav__item:nth-child(2)").addClass("nav_active");
-    },
-  });
-  let who = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".who__title",
-      start: "bottom bottom",
-      end: "bottom bottom",
-      endTrigger: ".who",
-      markers: false,
-    },
-    defaults: {
-      ease: Linear.easeNone,
-    },
-  });
+  $(".art__image")
+    .imagesLoaded()
+    .always(function (instance) {
+      gsap.from(".who__title h2", {
+        xPercent: -60,
+        scrollTrigger: {
+          trigger: ".who__title",
+          start: "top bottom",
+          end: () => "bottom +=" + header,
+        },
+        ease: Linear.easeNone,
+      });
+      ScrollTrigger.create({
+        trigger: ".who",
+        start: () => "top +=" + header,
+        onEnter: () => {
+          $(".nav__item").removeClass("nav_active");
+          $(".nav__item:nth-child(3)").addClass("nav_active");
+        },
+        onLeaveBack: () => {
+          $(".nav__item").removeClass("nav_active");
+          $(".nav__item:nth-child(2)").addClass("nav_active");
+        },
+      });
+      let who = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".who__title",
+          start: "bottom bottom",
+          end: "bottom bottom",
+          endTrigger: ".who",
+          markers: false,
+        },
+        defaults: {
+          ease: Linear.easeNone,
+        },
+      });
 
-  who
-    .from(".who__left_wrap", {
-      yPercent: -100,
-    })
-    .from(
-      ".who__right_wrap h3",
-      {
-        yPercent: 50,
-      },
-      0
-    );
+      who
+        .from(".who__left_wrap", {
+          yPercent: -100,
+        })
+        .from(
+          ".who__right_wrap h3",
+          {
+            yPercent: 50,
+          },
+          0
+        );
 
-  ScrollTrigger.create({
-    trigger: "footer",
-    start: () => "top +=" + header,
-    onEnter: () => {
-      $(".nav__item").removeClass("nav_active");
-      $(".nav__item:nth-child(4)").addClass("nav_active");
-    },
-    onLeaveBack: () => {
-      $(".nav__item").removeClass("nav_active");
-      $(".nav__item:nth-child(3)").addClass("nav_active");
-    },
-  });
+      ScrollTrigger.create({
+        trigger: "footer",
+        start: () => "top +=" + header,
+        onEnter: () => {
+          $(".nav__item").removeClass("nav_active");
+          $(".nav__item:nth-child(4)").addClass("nav_active");
+        },
+        onLeaveBack: () => {
+          $(".nav__item").removeClass("nav_active");
+          $(".nav__item:nth-child(3)").addClass("nav_active");
+        },
+      });
+      animation();
+    });
 });

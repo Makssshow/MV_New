@@ -1,11 +1,20 @@
 $(document).ready(function () {
-  $(".menu__button_wrap").click(function () {
-    if ($(this).hasClass("close-button")) {
+    $(".list__title").hover(
+    function () {
+      $(this).addClass("hover");
+      $(".list").addClass("hovered");
+    },
+    function () {
+      $(this).removeClass("hover");
+      $(".list").removeClass("hovered");
+    }
+  );
+
+
+  function openNav() {
+    if ($(".menu__button_wrap").hasClass("close-button")) {
       closeNav();
     } else {
-      if ($("body").hasClass("open-menu")) {
-        closeMobile();
-      }
       $("body").addClass("open-nav");
       gsap.to(".menu", {
         top: -2,
@@ -30,20 +39,9 @@ $(document).ready(function () {
           freeMode: true,
         });
       }
-      $(this).addClass("close-button");
+      $(".menu__button_wrap").addClass("close-button");
     }
-  });
-  $(".list__title").hover(
-    function () {
-      $(this).addClass("hover");
-      $(".list").addClass("hovered");
-    },
-    function () {
-      $(this).removeClass("hover");
-      $(".list").removeClass("hovered");
-    }
-  );
-
+  }
   function closeNav() {
     $("body").removeClass("open-nav");
     ScrollTrigger.refresh();
@@ -51,17 +49,6 @@ $(document).ready(function () {
     $(".menu__button_wrap").removeClass("close-button");
   }
 
-  //mobile menu click
-  $(".menu__button_mobile").click(function () {
-    if ($("body").hasClass("open-menu")) {
-      closeMobile();
-    } else {
-      openMobile();
-    }
-  });
-  $(".nav__item a").click(function () {
-    closeMobile()
-  });
 
   function openMobile() {
     if ($("body").hasClass("open-nav")) {
@@ -74,10 +61,43 @@ $(document).ready(function () {
     $("body").addClass("open-menu");
     $(".menu__button_mobile").html("close");
   }
-
   function closeMobile() {
     $("body").removeClass("open-menu");
     $(".menu__button_mobile").html("menu");
     ScrollTrigger.refresh();
   }
+
+  //mobile menu click
+  $(".menu__button_mobile").click(function () {
+    if ($("body").hasClass("open-menu")) {
+      closeMobile();
+    } else {
+      openMobile();
+    }
+  });
+
+  
+  if ($(window).width() > 650) {
+    $(".menu__button_wrap").click(function () {
+      openNav();
+    });
+    $(".nav__item a").click(function () {
+      closeMobile();
+    });
+  } else {
+    $(".nav__item:not(first-child) a").click(function () {
+      closeMobile();
+    });
+    $(".nav__item:first-child a").click(function (event) {
+      noLink(event);
+      $(".menu__button_mobile").html("Back");
+    });
+  }
+
+  function noLink(events) {
+    events.preventDefault();
+    openNav();
+  }
+
+
 });

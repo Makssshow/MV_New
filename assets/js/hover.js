@@ -72,13 +72,15 @@ $(document).ready(function () {
         ease: Linear,
         duration: .3,
       });
-      gsap.to(v4, {
-        x: x * 0.4,
-        y: y * 0.4,
-        scale: 0.5,
-        ease: Linear,
-        duration: .3,
-      });
+      if (v4.length) {
+        gsap.to(v4, {
+          x: x * 0.4,
+          y: y * 0.4,
+          scale: 0.5,
+          ease: Linear,
+          duration: .3,
+        });
+      }
       if (el == ".all") {
         gsap.to(vText, {
           x: x * 0.4,
@@ -110,12 +112,14 @@ $(document).ready(function () {
         scale: 1,
         ease: "none",
       });
-      gsap.to(v4, 0.7, {
-        x: 0,
-        y: 0,
-        scale: 1,
-        ease: "none",
-      });
+      if (v4.length) {
+        gsap.to(v4, 0.7, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          ease: "none",
+        });
+      }
       gsap.to(vText, 0.7, {
         x: 0,
         y: 0,

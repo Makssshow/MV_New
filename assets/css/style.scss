@@ -115,7 +115,8 @@ body {
   .menu__logo,
   .menu__button,
   .header_wrap,
-  .art__title_wrap {
+  .art__title_wrap,
+  .who__title {
     border-color: $beige;
   }
   .secondary {
@@ -131,7 +132,6 @@ body {
     }
   }
 }
-
 .open-nav, .open-menu {
   overflow: hidden;
   .nav {
