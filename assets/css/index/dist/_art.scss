@@ -102,6 +102,13 @@
     &__image {
       width: 100%;
       height: auto;
+      &_tilt {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       a {
         width: 100%;
       }
@@ -134,7 +141,7 @@
       z-index: -1;
       position: relative;
       display: block;
-      width: 100%;
+      width: 100vw;
       height: auto;
     }
     .center {
