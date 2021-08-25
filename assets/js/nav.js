@@ -1,5 +1,9 @@
 $(document).ready(function () {
-    $(".list__title").hover(
+  if ($(window).width() <= 650) {
+    $(".nav").appendTo("header");
+  }
+
+  $(".list__title").hover(
     function () {
       $(this).addClass("hover");
       $(".list").addClass("hovered");
@@ -9,7 +13,6 @@ $(document).ready(function () {
       $(".list").removeClass("hovered");
     }
   );
-
 
   function openNav() {
     if ($(".menu__button_wrap").hasClass("close-button")) {
@@ -49,7 +52,6 @@ $(document).ready(function () {
     $(".menu__button_wrap").removeClass("close-button");
   }
 
-
   function openMobile() {
     if ($("body").hasClass("open-nav")) {
       closeNav();
@@ -76,7 +78,6 @@ $(document).ready(function () {
     }
   });
 
-  
   if ($(window).width() > 650) {
     $(".menu__button_wrap").click(function () {
       openNav();
@@ -98,6 +99,4 @@ $(document).ready(function () {
     events.preventDefault();
     openNav();
   }
-
-
 });
