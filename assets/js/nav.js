@@ -50,6 +50,7 @@ $(document).ready(function () {
     ScrollTrigger.refresh();
     $(".list").css("display", "none");
     $(".menu__button_wrap").removeClass("close-button");
+    $(".menu__button_mobile").html("menu");
   }
 
   function openMobile() {
@@ -71,10 +72,15 @@ $(document).ready(function () {
 
   //mobile menu click
   $(".menu__button_mobile").click(function () {
-    if ($("body").hasClass("open-menu")) {
-      closeMobile();
-    } else {
+    if (!$("body").hasClass("open-menu") && !$("body").hasClass("open-nav")) {
       openMobile();
+      console.log("openMobile");
+    } else if ($("body").hasClass("open-menu")){
+      closeMobile();
+      console.log("closeMObile");
+    } else if ($("body").hasClass("open-nav")) {
+      closeNav();
+      console.log("closeNav");
     }
   });
 
@@ -91,7 +97,7 @@ $(document).ready(function () {
     });
     $(".nav__item:first-child a").click(function (event) {
       noLink(event);
-      $(".menu__button_mobile").html("Back");
+      $(".menu__button_mobile").html("close");
     });
   }
 

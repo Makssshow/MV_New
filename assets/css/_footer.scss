@@ -41,15 +41,19 @@
       }
       &:last-child {
         z-index: 2;
-        clip-path: inset(0 0 0 100%);
-        transition: 1s ease-in-out;
+        path {
+          clip-path: inset(0 0 0 100%);
+          transition: 1s ease-in-out;
+        }
       }
     }
     &:hover {
       svg {
         transform: rotate(360deg);
         &:last-child {
-          clip-path: inset(0 0 0 0);
+          path {
+            clip-path: inset(0 0 0 0);
+          }
         }
       }
     }
