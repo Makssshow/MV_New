@@ -73,7 +73,7 @@ body {
   color: $light-dark;
   background-color: $dark1;
   .menu,
-  .title div {
+  .title div, .portfolio_wrap_2, .portfolio_mobile {
     background-color: $dark1;
   }
   .menu__button_flex div,
@@ -90,6 +90,9 @@ body {
   }
   .button {
     color: $white;
+    &.back {
+      color: $light-dark;
+    }
     &_1,
     &_2,
     &_3,
@@ -123,7 +126,12 @@ body {
   .secondary {
     fill: $beige;
   }
-  .button.more {
+  .art .star {
+    svg path {
+      fill: $beige;
+    }
+  }
+  .button.more, .button.back {
     color: $beige;
     .button_1,
     .button_2,

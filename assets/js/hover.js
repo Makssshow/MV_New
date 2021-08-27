@@ -130,7 +130,16 @@ $(document).ready(function () {
     attachEventsListener(el);
   };
 
-  hoverMouse(".all");
-  hoverMouse(".more");
-  hoverMouse(".projects");
+  if ($(".all").length) {
+    hoverMouse(".all");
+  }
+  if ($(".more").length) {
+    hoverMouse(".more");
+  }
+  if ($(".projects").length) {
+    hoverMouse(".projects");
+  }
+  if ($(".back").length) {
+    hoverMouse(".back");
+  }
 });

@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
 
   ScrollTrigger.create({
     trigger: ".portfolio_wrap",
-    start: "top 90%",
+    start: "top 60%",
     endTrigger: "html",
     end: "bottom top",
     onEnter: () => {
