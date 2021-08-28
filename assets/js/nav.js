@@ -74,13 +74,10 @@ $(document).ready(function () {
   $(".menu__button_mobile").click(function () {
     if (!$("body").hasClass("open-menu") && !$("body").hasClass("open-nav")) {
       openMobile();
-      console.log("openMobile");
     } else if ($("body").hasClass("open-menu")){
       closeMobile();
-      console.log("closeMObile");
     } else if ($("body").hasClass("open-nav")) {
       closeNav();
-      console.log("closeNav");
     }
   });
 
