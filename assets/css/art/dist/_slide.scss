@@ -45,7 +45,7 @@
   &__title {
     font-size: 36px;
     line-height: 34px;
-    margin-bottom: 26px;
+    margin-bottom: 22px;
   }
 
   &__button {
@@ -118,8 +118,8 @@
     content: none;
   }
   &:focus {
-      border: none;
-      outline: none;
+    border: none;
+    outline: none;
   }
 }
 
@@ -133,8 +133,6 @@
   }
 }
 
-
-
 .animation {
   opacity: 1;
   img {
@@ -146,14 +144,69 @@
   }
 }
 
-
 @media screen and (max-width: $tablet) {
-    .slideshow {
-        &__image {
-            width: 100%;
-            max-width: unset;
-            max-height: unset;
-            height: 440px;
-        }
+  .slideshow {
+    &__item {
+      position: relative;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    &__image {
+      width: 100%;
+      max-width: unset;
+      max-height: unset;
+      height: 440px;
+      margin: 0;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    &_wrap {
+      position: absolute;
+      bottom: 5vh;
+      left: 13vw;
+      margin-left: 0;
+    }
+    &__button {
+      right: 20px;
+      top: 40px;
+    }
+  }
+  .swiper-button-next {
+    top: calc(50% + 220px + 40px);
+    right: 20px;
+  }
+  .swiper-button-prev {
+    top: calc(50% + 220px + 40px);
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .slideshow {
+    &__button {
+      top: 60px;
+    }
+    &__image {
+        height: 222px;
+    }
+    &_wrap {
+        bottom: 130px;
+        left: 20px;
+    }
+  }
+  .swiper-button-next {
+      top: auto;
+      bottom: 57px;
+      right: 20px;
+  }
+  .swiper-button-prev {
+      top: auto;
+      bottom: 57px;
+      left: 20px;
+  }
 }

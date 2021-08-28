@@ -26,6 +26,7 @@ jQuery(document).ready(function ($) {
     slidesPerView: 1,
     loop: true,
     shortSwipes: false,
+    spaceBetween: 50,
     longSwipesRatio: .1,
     longSwipesMs: 50,
     navigation: {
