@@ -1,4 +1,6 @@
+
 jQuery(document).ready(function ($) {
+  mobile();
   $(window).resize(function () {
     values();
   });
@@ -13,6 +15,33 @@ jQuery(document).ready(function ($) {
     "%cMade by Maks Ray. E-mail: maksray@gmail.com",
     "color:#000; background: #07B8BE; font-size: 28px; padding: 5px 10px;"
   );
+
+  function mobile() {
+    var h = 6;
+    if (jQuery(window).width() <= 1140) {
+      for (let i = h; i >= 0; i--) {
+        var img = jQuery(".grid__item");
+        jQuery(img[i]).css("display", "block");
+      }
+      if (jQuery(".grid__item").length <= 6) {
+        jQuery(".button_mob").fadeOut(500);
+      } else {
+        jQuery(".button_mob").fadeIn(500);
+      }
+    }
+    jQuery(".button_mob").click(function () {
+      var portfol = jQuery(".grid__item");
+      for (let a = h + 4; a >= h; a--) {
+        jQuery(portfol[a]).css("display", "block");
+      }
+      h = h + 4;
+      if (jQuery(".grid__item:visible").length >= portfol.length) {
+        jQuery(".button_mob").css("display", "none");
+      }
+    });
+  }
+  
+
 
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.defaults({

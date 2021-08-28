@@ -176,6 +176,10 @@ header .title__logo svg path {
   }
 }
 
+.button_mob {
+  display: none;
+}
+
 @media screen and (max-width: 1500px) {
   .grid {
     width: 986px;
@@ -209,11 +213,22 @@ header .title__logo svg path {
     width: 478px;
     max-width: calc(100vw - 208px - 2vw);
     &__item {
+      display: none;
       width: 478px;
       max-width: calc(100vw - 208px - 2vw);
       height: 500px;
       margin-right: 0;
     }
+  }
+  .button_mob {
+    display: flex;
+    width: 160px;
+    height: 160px;
+    border: 2px solid $white;
+
+    font-size: 48px;
+    line-height: 1em;
+    margin-bottom: 40px;
   }
 }
 
