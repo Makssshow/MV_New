@@ -4,7 +4,6 @@ jQuery(document).ready(function ($) {
   );
 
   $(".grid__item").each(function (i) {
-
     let image = $(this).find("img").attr("src"),
       size = $(this).find("h4").html(),
       title = $(this).find("h2").html(),
@@ -23,14 +22,57 @@ jQuery(document).ready(function ($) {
     );
   });
 
-  setTimeout(() => {
-    let slidsehow = new Swiper(".slideshow", {
-      slidesPerView: 1,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+  let slidsehow = new Swiper(".slideshow", {
+    slidesPerView: 1,
+    loop: true,
+    shortSwipes: false,
+    longSwipesRatio: .1,
+    longSwipesMs: 50,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  const swiper = document.querySelector(".slideshow").swiper;
+
+  //OPEN SLIDESHOW
+  $(".grid__item").click(function () {
+    let index = $(".grid__item").index(this);
+
+    swiper.slideTo(index + 1, 0, false);
+
+    $(".slideshow_wrapper").addClass("open");
+
+    let image = $(".slideshow__image").html();
+    let item = document.querySelectorAll(".grid__item")[index].getBoundingClientRect();
+    let position = document.querySelector(".swiper-slide-active img:first-child").getBoundingClientRect();
+    $(".swiper-slide-active .slideshow__image").append(image);
+
+    gsap.fromTo(".swiper-slide-active img:last-child", {
+      width: item.width,
+      height: item.height,
+      left: item.left,
+      top: item.top,
+    }, {
+        width: position.width,
+        height: position.height,
+        left: position.left,
+        top: position.top,  
+        duration: 1,
+        onComplete: () => {
+            $(".animation img:last-child").remove();
+            $(".animation").removeClass("animation");
+        }
     });
-  }, 0);
+
+
+    $(".swiper-slide-active").addClass("animation");
+
+  });
+
+  //CLOSE SLIDESHOW
+  $(".slideshow__button").click(function () {
+    $(".slideshow_wrapper").removeClass("open");
+  });
 });
