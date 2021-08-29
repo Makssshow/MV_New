@@ -30,7 +30,7 @@ jQuery(document).ready(function (jQuery) {
       openNav();
     });
     jQuery(".nav__item a").click(function () {
-      closeMobile();
+      closeNav();
     });
   } else {
     jQuery(".nav__item:not(first-child) a").click(function () {

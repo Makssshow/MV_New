@@ -23,6 +23,7 @@
 
 @media screen and (max-width: $tablet) {
     .cols {
+        margin-top: 102px;
         &__left {
             width: 100px;
         }
@@ -37,6 +38,7 @@
 
 @media screen and (max-width: $mobile) {
     .cols {
+        margin-top: 60px;
         &__left {
             display: none;
         }
