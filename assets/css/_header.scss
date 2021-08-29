@@ -18,6 +18,7 @@
     .a6,
     .a8 {
       visibility: hidden;
+      transition: none;
     }
     &::before {
       background-color: $neon;

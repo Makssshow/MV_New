@@ -12,6 +12,10 @@ jQuery(document).ready(function ($) {
     scrub: 0.1,
   });
 
+  $(".all").click(function () {
+    openNav();
+  });
+
   fontSpy("Almarena", {
     glyphs: "\ue81a\ue82d\ue823",
     success: function () {

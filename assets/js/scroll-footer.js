@@ -1,12 +1,12 @@
 
   function animation() {
-    if ($(window).width() > 650) {
+    if (jQuery(window).width() > 650) {
       gsap.from(".footer__title h2", {
         xPercent: -30,
         scrollTrigger: {
           trigger: ".footer__title",
           start: "top bottom",
-          end: "top +=" + $("header").height(),
+          end: "top +=" + jQuery("header").height(),
           ease: Linear.easeNone,
         },
       });

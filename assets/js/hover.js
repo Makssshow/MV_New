@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
   var hoverMouse = function (el) {
     var main = $(el);
     var v2 = $(el).children(".button_2");
