@@ -163,7 +163,7 @@ header .title__logo svg path {
       color: $white;
       text-transform: uppercase;
       padding-left: 20px;
-      width: 100%;
+      width: calc(97% - 20px);
       font-size: 18px;
       line-height: 1em;
     }
