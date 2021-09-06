@@ -2,6 +2,25 @@
 @import "reset";
 @import "cols";
 
+
+@-moz-document url-prefix() {
+  .cursor-point {
+      background-color: #888888;
+  }
+}
+.cursor-point {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  backdrop-filter: invert(1);
+  filter: grayscale(1);
+  z-index: 999999999;
+  pointer-events: none;
+}
+
+
 .tilt {
 	overflow: hidden;
 	position: relative;
@@ -35,6 +54,9 @@
 
 
 @import "button";
+html {
+  cursor: none;
+}
 body {
   font-family: $Almarena, "Tahoma", sans-serif;
   font-size: 180px;
@@ -46,7 +68,21 @@ body {
   letter-spacing: normal;
   margin: 0;
   padding: 0;
+
+      /* Cursor styles */
+      --cursor-stroke: #888888;
+      --cursor-fill: none;
+      --cursor-stroke-width: 1px;
 }
+* {
+  cursor: none !important;
+}
+.cursor,
+.cursor-point, .cursor-around {
+    display: none;
+}
+
+
 @media screen and (max-width: $tablet) {
   body {
     font-size: 80px;
@@ -179,6 +215,29 @@ body {
   }
   .menu__button_wrap::before {
     background-color: $white;
+  }
+}
+
+
+@media (any-pointer: fine) {
+  .cursor-point, .cursor-around {
+      display: block;
+  }
+
+  .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 9999;
+  }
+
+  .cursor__inner {
+      fill: var(--cursor-fill);
+      stroke: var(--cursor-stroke);
+      stroke-width: var(--cursor-stroke-width);
   }
 }
 

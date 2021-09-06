@@ -21,6 +21,7 @@
       }
       h2 {
         writing-mode: vertical-lr;
+        margin: auto;
       }
     }
   }
@@ -52,8 +53,8 @@
       &::before {
         content: "";
         position: fixed;
-        width: 101%;
-        height: 100%;
+        width: 105%;
+        height: 105%;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -83,8 +84,8 @@
     justify-content: center;
     a {
       display: block;
-      max-width: 100%;
-      max-height: 100%;
+      width: fit-content;
+      height: 95%;
       position: relative;
       transition: box-shadow 0.3s ease-in-out;
       box-shadow: 0px -38px 60px rgba(0, 0, 0, 0.45);
@@ -95,8 +96,10 @@
     }
   }
   &__template {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: fit-content !important;
+    height: fit-content !important;
     visibility: hidden;
   }
   &_pinned {

@@ -58,10 +58,11 @@ header .title__logo svg path {
   margin-top: 197px;
   .cols {
     &__right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-direction: column;
+      overflow: hidden;
       padding-top: 40px;
       //   overflow: hidden;
       .star {
@@ -73,6 +74,8 @@ header .title__logo svg path {
       h2 {
         writing-mode: vertical-lr;
         margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     &__left {

@@ -16,7 +16,10 @@ jQuery(document).ready(function (jQuery) {
 
   //mobile menu click
   jQuery(".menu__button_mobile").click(function () {
-    if (!jQuery("body").hasClass("open-menu") && !jQuery("body").hasClass("open-nav")) {
+    if (
+      !jQuery("body").hasClass("open-menu") &&
+      !jQuery("body").hasClass("open-nav")
+    ) {
       openMobile();
     } else if (jQuery("body").hasClass("open-menu")) {
       closeMobile();
@@ -103,3 +106,15 @@ function noLink(events) {
   events.preventDefault();
   openNav();
 }
+
+//Cursor
+//cursor
+window.addEventListener("mousemove", function (evt) {
+  var x = evt.x;
+  var y = evt.y;
+  var cursorPoint = document.querySelector(".cursor-point");
+  setTimeout(() => {
+    cursorPoint.style.left = x + "px";
+    cursorPoint.style.top = y + "px";
+  }, 60);
+});
