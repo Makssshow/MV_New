@@ -10,12 +10,6 @@ jQuery(document).ready(function ($) {
       values();
     },
   });
-
-  console.log(
-    "%cMade by Maks Ray. E-mail: maksray@gmail.com",
-    "color:#000; background: #07B8BE; font-size: 28px; padding: 5px 10px;"
-  );
-
   function mobile() {
     var h = 6;
     if (jQuery(window).width() <= 1140) {
