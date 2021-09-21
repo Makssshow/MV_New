@@ -39,16 +39,16 @@ jQuery(document).ready(function ($) {
 
   //OPEN SLIDESHOW
   $(".grid__item").click(function () {
-    let index = $(".grid__item").index(this);
+    var index = $(".grid__item").index(this);
 
     swiper.slideTo(index + 1, 0, false);
 
     $(".slideshow_wrapper").addClass("open");
 
-    let image = $(".slideshow__image").html();
+    let image = $(".grid__item").eq(index).find("img");
     let item = document.querySelectorAll(".grid__item")[index].getBoundingClientRect();
     let position = document.querySelector(".swiper-slide-active img:first-child").getBoundingClientRect();
-    $(".swiper-slide-active .slideshow__image").append(image);
+    $(image).clone().appendTo(".swiper-slide-active .slideshow__image");
 
     gsap.fromTo(".swiper-slide-active img:last-child", {
       width: item.width,
