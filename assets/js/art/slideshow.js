@@ -45,10 +45,10 @@ jQuery(document).ready(function ($) {
 
     $(".slideshow_wrapper").addClass("open");
 
-    let image = $(".grid__item").eq(index).find("img");
+    let image = $(".grid__item").eq(index).find("img").attr("src");
     let item = document.querySelectorAll(".grid__item")[index].getBoundingClientRect();
     let position = document.querySelector(".swiper-slide-active img:first-child").getBoundingClientRect();
-    $(image).clone().appendTo(".swiper-slide-active .slideshow__image");
+    $(".swiper-slide-active .slideshow__image").append("<img src='" + image + "'  alt='template'/>");
 
     gsap.fromTo(".swiper-slide-active img:last-child", {
       width: item.width,
