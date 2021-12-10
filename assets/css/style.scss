@@ -17,7 +17,7 @@
   backdrop-filter: invert(1);
   -webkit-backdrop-filter: invert(1);
   filter: grayscale(1);
-  z-index: 999999999;
+  z-index: 999999;
   pointer-events: none;
 }
 
@@ -107,45 +107,12 @@ body {
 }
 
 .light-dark, .open-nav, .open-menu {
-  color: $light-dark;
+  color: $beige;
   background-color: $dark1;
   .menu,
   .title div, .portfolio_wrap_2, .portfolio_mobile {
     background-color: $dark1;
   }
-  .menu__button_flex div,
-  .menu__button_wrap::before {
-    background-color: $light-dark;
-  }
-  .menu__button_wrap,
-  .cols__left,
-  .cols__right,
-  .menu__logo,
-  .menu__button,
-  .header_wrap {
-    border-color: $light-dark;
-  }
-  .button {
-    color: $white;
-    &.back {
-      color: $light-dark;
-    }
-    &_1,
-    &_2,
-    &_3,
-    &_4 {
-      border-color: $white;
-    }
-  }
-  .secondary {
-    fill: $light-dark;
-  }
-  .center__video {
-    display: none;
-  }
-}
-.border-light {
-  color: $beige;
   .menu__button_flex div,
   .menu__button_wrap::before {
     background-color: $beige;
@@ -156,42 +123,97 @@ body {
   .menu__logo,
   .menu__button,
   .header_wrap,
-  .art__title_wrap,
-  .who__title {
+  .art__title_wrap {
     border-color: $beige;
+  }
+  .button {
+    color: $white;
+    &.back {
+      color: $beige;
+    }
+    &_1,
+    &_2,
+    &_3,
+    &_4 {
+      border-color: $white;
+    }
   }
   .secondary {
     fill: $beige;
   }
+  .center__video {
+    display: none;
+  }
+}
+.border-light {
+  color: $light-dark;
+  background-color: $beige;
+  .menu,
+  .title div, .portfolio_wrap_2, .portfolio_mobile {
+    background-color: $beige;
+    border-color: $light-dark;
+  }
+  .title__logo path {
+    fill: $light-dark;
+  }
+  .menu__button_flex div,
+  .menu__button_wrap::before {
+    background-color: $light-dark;
+  }
+  .menu__button_wrap,
+  .cols__left,
+  .cols__right,
+  .menu__logo,
+  .menu__button,
+  .header_wrap,
+  .art__title_wrap,
+  .who__title,
+  .footer__title,
+  .autro {
+    border-color: $light-dark;
+  }
+  .secondary {
+    fill: $light-dark;
+  }
   .art .star {
     svg path {
-      fill: $beige;
+      fill: $light-dark;
     }
   }
-  .button.more, .button.back {
-    color: $beige;
+  .button.more, .button.back, .button.projects {
+    color: $light-dark;
     .button_1,
     .button_2,
     .button_3,
     .button_4 {
-      border-color: $beige;
+      border-color: $light-dark;
     }
   }
 }
 .open-nav, .open-menu {
   overflow: hidden;
+  .menu {
+    background-color: $dark1;
+  }
   .nav {
     .nav__item {
       a {
-        color: $white;
+        color: $beige;
         &:hover {
           color: $neon;
         }
       }
     }
   }
+  .list__item {
+
+    border-color: $beige;
+  }
+  .list__title {
+    color: $beige;
+  }
   .menu__button_mobile {
-    color: $white;
+    color: $beige;
   }
   .menu__button_wrap,
   .cols__left,
@@ -200,10 +222,10 @@ body {
   .menu__button,
   .header_wrap,
   .art__title_wrap {
-    border-color: $white;
+    border-color: $beige;
   }
   .secondary {
-    fill: $white;
+    fill: $beige;
   }
 }
 

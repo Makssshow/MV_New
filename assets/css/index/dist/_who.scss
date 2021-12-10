@@ -5,6 +5,9 @@
     border-top: 2px solid $light-dark;
     border-bottom: 2px solid $light-dark;
     padding: 20px 0;
+    h2 {
+      will-change: transform;
+    }
   }
   &__left {
     overflow: hidden;
@@ -12,6 +15,7 @@
       padding-bottom: 48px;
       writing-mode: vertical-lr;
       transform: rotate(180deg);
+      will-change: transform;
     }
   }
   &__right {
@@ -22,6 +26,7 @@
       h3 {
         position: absolute;
         bottom: 0;
+        will-change: transform;
         left: 0;
         writing-mode: vertical-lr;
       }

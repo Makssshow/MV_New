@@ -2,6 +2,7 @@
   &__title {
     white-space: nowrap;
     padding: 20px 0;
+    will-change: transform;
     &_wrap {
       overflow: hidden;
       border-top: 2px solid $light-dark;
